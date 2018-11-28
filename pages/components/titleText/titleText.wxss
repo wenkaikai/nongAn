@@ -1,0 +1,95 @@
+page{
+  background:#f8f8f8;
+}
+.top{
+  text-align: center;
+  margin-bottom:20rpx;
+}
+.subTitle{
+  color:#4a4a4a;
+  padding:20rpx 0;
+  background:#fff;
+  
+}
+.image{
+  background:#fff;
+  padding:40rpx 0;
+}
+.bottom{
+  background:#fff;
+  padding:0 20rpx 30rpx 20rpx;
+}
+.bottom view{
+  display:flex;
+  justify-content: space-between;
+  color:#4a4a4a;
+  padding:20rpx 0;
+  align-items:center;
+  border-bottom:1px solid #ccc;
+  font-size:28rpx;
+}
+.bottom view:last-of-type{
+  border-bottom:none;
+}
+.bottom view.title{
+ justify-content: center;
+ font-size:32rpx;
+}
+.bottom view text:first-child{
+  white-space: nowrap;
+  margin-right:20rpx;
+}
+.bottom view text:last-child{
+  color:#9B9B9B;
+}
+/* 溯源信息单独的样式 */
+
+.traceBottom{
+  background:#fff;
+  padding:0 20rpx 30rpx 20rpx;
+}
+.tableWrap{
+    border:1px solid #ccc;
+}
+.tableWrap >.tableRow{
+    border-bottom:1px solid #ccc;
+}
+.tableWrap >.tableRow:last-child{
+    border-bottom:none;
+}
+.tableRow{
+    display:flex;
+    align-items:stretch;
+}
+
+.tableRow view{
+    border-right:1px solid #ccc;
+    padding:20rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items:center;
+}
+.tableRow view:first-child{
+    margin-right:5%;
+    width:30%;
+    
+}
+.tableRow view:last-child{
+    border:none;
+    width:60%;
+}
+.tableRow image{
+    max-width:90%;
+}
+.listTitle{
+    display:flex;
+    align-items: center;
+    padding:30rpx 0;
+    font-weight:bold;
+    overflow:hidden;
+}
+.listTitle text:first-child{
+    margin-right:10rpx;
+    box-sizing: border-box;
+    margin-top:12rpx;
+}

@@ -1,0 +1,15 @@
+page{
+  background: #F5F5F5
+}
+.search{
+  color:#f60;
+}
+.search .field-index--van-field van-cell{
+  border-radius:25px;
+}
+.com-show{
+  display:block;
+}
+.com-hide{
+  display:none;
+}

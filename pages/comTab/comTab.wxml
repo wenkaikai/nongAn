@@ -1,0 +1,64 @@
+<!-- <import src="../commonTemplate/{{column=='双公示'?'doublePublic.wxml':'doublePublic1.wxml'}}"/> -->
+<!-- 双公示 -->
+<import src="../commonTemplate/doublePublic.wxml"/>
+<!-- 质量监管 -->
+<import src="../commonTemplate/qualityInspection.wxml"/>
+<!-- 认证信息 -->
+<import src="../commonTemplate/authInfo.wxml"/>
+<!-- 监督检查 -->
+<import src="../commonTemplate/supervisionInspection.wxml"/>
+<!-- 溯源信息 -->
+<import src="../commonTemplate/traceInfo.wxml"/>
+<!-- 红黑榜 -->
+<import src="../commonTemplate/redBlackRank.wxml"/>
+<!-- 媒体评价 -->
+<import src="../commonTemplate/mediaEvaluation.wxml"/>
+<!-- 消费者评价 -->
+<import src="../commonTemplate/customerEvaluation.wxml"/>
+<!-- 商标、专利、著作权、植物新品种 -->
+<import src="../commonTemplate/intellectualProperty.wxml"/>
+<!-- judiciaryInfo  -->
+<import src="../commonTemplate/judiciaryInfo.wxml"/>
+<!-- judiciaryInfoBetween  这个是同judiciaryInfo 不同的是space-between布局  -->
+<import src="../commonTemplate/judiciaryInfoBetween.wxml"/>
+<!-- finallyCommonTemplate  -->
+<import src="../commonTemplate/finallyCommonTemplate.wxml"/>
+<view wx:if="{{obj.column=='双公示'}}">
+  <template is="doublePublic" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='质量检查'}}">
+  <template is="qualityInspection" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='认证信息'}}">
+  <template is="authInfo" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='监督检查'}}">
+  <template is="supervisionInspection" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='溯源信息'}}">
+  <template is="traceInfo" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='红黑榜'}}">
+  <template is="redBlackRank" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='媒体评价'}}">
+  <template is="mediaEvaluation" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='消费者评价'}}">
+  <template is="customerEvaluation" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='专利'||obj.column=='商标'||obj.column=='著作权'}}">
+  <template is="intellectualProperty" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='失信信息'||obj.column=='被执行人'||obj.column=='法院公告'||obj.column=='经营异常'}}">
+  <template is="judiciaryInfo" data="{{...obj}}"></template>
+</view>
+<view wx:elif="{{obj.column=='法院裁判'}}">
+  <template is="judiciaryInfoBetween" data="{{...obj}}"></template>
+</view>
+
+<view wx:elif="{{obj.column=='员工评价'}}">
+  <template is="finallyCommonTemplate" data="{{...obj}}"></template>
+</view>
+
+

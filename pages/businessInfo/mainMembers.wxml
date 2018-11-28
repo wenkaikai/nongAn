@@ -1,0 +1,18 @@
+<template name="mainMembers">
+ 
+    <view>
+        <view class="icon iconfont icon-minshianjian"></view>
+        <view class="content">
+          <text>满杰</text>
+          <text>懂事</text>
+        </view>
+    </view>
+     <view>
+        <view class="icon iconfont icon-minshianjian"></view>
+        <view class="content">
+          <text>满杰</text>
+          <text>懂事</text>
+        </view>
+    </view>
+
+</template>

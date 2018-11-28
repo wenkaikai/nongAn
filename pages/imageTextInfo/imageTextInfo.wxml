@@ -1,0 +1,15 @@
+
+<view class="top">
+  <view class="enterpriseTitle">{{obj.subTitle}}</view>
+  <view class="image" wx:for="{{obj.imgUrl}}" wx:key="index"><image mode="aspectFit" src="{{item}}"></image></view>
+</view>
+<view class="bottom">
+  <view class="title">{{obj.listTitle}}</view>
+  <view wx:for="{{obj.content}}" wx:key="index">
+    <text>{{item.title}}:</text>
+    <text>
+        {{item.content}}
+    </text>
+  </view>
+</view>
+

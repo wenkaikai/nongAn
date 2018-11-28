@@ -1,0 +1,7 @@
+/* pages/enterprise/enterprise.wxss */
+.com-hide{
+    display:none;
+}
+.com-show{
+    display:block;
+}

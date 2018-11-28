@@ -1,0 +1,20 @@
+<template name="historyModify">
+  <view wx:for="{{objArray}}">
+    <view class="time">
+      <view class="dot"></view>
+      <view>{{item.time}}</view>
+    </view>
+    <view class="modifyScope">{{item.label}}</view>
+    <view class="content">
+      <view class="before">
+        <view class="modifyTitle">变更前</view>
+        <view class="main">{{item.before}}</view>
+      </view>
+      <view class="after borderNoRight">
+        <view class="modifyTitle">变更后</view>
+        <view class="main ">{{item.after}}</view>
+      </view>
+    </view>
+  </view>
+
+</template>

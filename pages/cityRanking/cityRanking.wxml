@@ -1,0 +1,16 @@
+<view class="top">
+    <view class="num">109,953</view>
+    <view class="">全国录入农业主体总数</view>
+</view>
+<view class="bottom">
+    <view class="item">
+        <view class="rank">
+            <text class="front">第一名</text>
+             浙江省
+        </view>
+        <view class="bar">
+            <view></view>
+            <view>40152</view>
+        </view>
+    </view>
+</view>

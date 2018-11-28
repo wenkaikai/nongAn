@@ -1,0 +1,12 @@
+/* pages/titleText/titleText.wxss */
+page{
+    padding:30rpx;
+}
+.top view{
+    margin-bottom:30rpx;
+}
+.top view:last-child text{
+    margin-right:30rpx;
+    color:#9b9b9b;
+    margin-bottom:30rpx;
+}

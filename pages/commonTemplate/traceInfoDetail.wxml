@@ -1,0 +1,25 @@
+
+<template name="traceInfoDetail">
+  <view class="top">
+    <view class="subTitle">{{subTitle}}</view>
+  </view>
+  <view class="traceBottom">
+    <view wx:for="{{content}}" wx:key="index" wx:for-item="item1">
+        <view class="listTitle" wx:if="{{item1.title}}"><text style="color:#f44">*</text><text>{{item1.title}}</text></view>
+        <view class="tableWrap">
+            <view  class="tableRow" wx:for="{{item1.listContent}}" wx:key="index" wx:for-item="item2">
+                <block wx:if="{{item2.type=='text'}}">
+                    <view>{{item2.title}}</view>
+                    <view>{{item2.content}}</view>
+                </block>
+                <block wx:else>
+                    <view>{{item2.title}}</view>
+                    <view><image src="{{item2.content}}" mode="widthFix"></image></view>
+                </block>
+            </view>
+        </view>
+    </view>
+  </view>
+</template>
+
+

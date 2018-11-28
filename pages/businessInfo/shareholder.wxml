@@ -1,0 +1,26 @@
+<template name="shareholder">
+  <view>
+   <view class="shareholderTitle">
+    <view class="name">天津高林华创科技有限公司</view>
+    <view class="label">大股东</view>
+   </view>
+   <view class="shareholderContent">
+    <view>
+      <text>持股比例</text>
+      <text>41%</text>
+    </view>
+    <view class="borderNoRight">
+      <text>股东类型</text>
+      <text>自然人股东</text>
+    </view>
+    <view>
+      <text>认缴出资额</text>
+      <text>4520</text>
+    </view>
+     <view class="borderNoRight">
+      <text>实出资额</text>
+      <text>4200</text>
+    </view>
+   </view>
+  </view>
+</template>

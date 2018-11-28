@@ -1,0 +1,10 @@
+<view>
+  <com-searchBar bind:change = 'change' bind:cancel = 'cancel'></com-searchBar>
+  <com-history bind:change = 'change' showed="{{history?'com-show':'com-hide'}}" id="history"></com-history>
+  <com-hotSearch bind:change = 'change' showed="{{history?'com-show':'com-hide'}}"></com-hotSearch>
+  <com-searchResult showed="{{history?'com-hide':'com-show'}}"></com-searchResult>
+</view>
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

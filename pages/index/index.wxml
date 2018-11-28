@@ -1,0 +1,131 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="header">
+        <view class="top">
+            <view class="brand">
+                <view><image src="/libs/img/logo.png" mode="widthFit"></image></view>
+                <view class="name">农安信用</view>
+            </view>
+            <view class="introduce">
+                <text>都在用的农产品安全信用平台</text>
+                <text>国家农科院旗下</text>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="icon iconfont icon-sousuo"></view>
+            <view>
+                <input type="text" bindtap="toSearch" disabled="true" placeholder="请输入主体名"/>
+            </view>
+        </view>
+    </view>
+    <view class="function">
+        <view bindtap="creditOptimization">
+            <view class="icon iconfont icon-youxuan"></view>
+            <view>信用优选</view>
+        </view>
+        <view bindtap="creditPolicy">
+            <view class="icon iconfont icon-zhengce"></view>
+            <view>信用政策</view>
+        </view>
+        <view bindtap="cityRanking">
+            <view class="icon iconfont icon-paihang1"></view>
+            <view>城市排行</view>
+        </view>
+         <view bindtap="nearbyCorporation">
+            <view class="icon iconfont icon-dingwei"></view>
+            <view>附近主体</view>
+        </view>
+    </view>
+    <view class="createCredit">
+        <view>一键创建信用档案</view>
+        <view class="dataBase1"></view>
+    </view>
+    <view class="information">
+        <view class="listWrap">
+            <view class="title">
+                <view class="titleContent">精选情报</view>
+            </view>
+            <view class="Listcontent">
+                <view>
+                    <view class="corporation">
+                        <view class="tag">企</view>
+                        <view>
+                            <view class="name">农业科学院</view>
+                            <view class="time">09-03 16:50</view>
+                        </view>
+                    </view>
+                    <view class="article">
+                        <view class="articleTitle">最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。</view>
+                        <view class="articleInfo">
+                            最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！
+                        </view>
+                        <view class="fullText">全文</view>
+                    </view>
+                </view>
+            </view>
+            <view class="addtion">
+                <view class="viewCount">172.6万阅读</view>
+                <view class="toolBar">
+                    <view>
+                        <text class="icon iconfont icon-dianzanquxiao zan"></text>
+                        <text>6</text>
+                    </view>
+                        <view>
+                        <view class="icon iconfont icon-pinglun"></view>
+                    </view>
+                        <view>
+                        <view class="icon iconfont icon-forward"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+         <view class="listWrap">
+            <view class="title">
+                <view class="titleContent">精选情报</view>
+            </view>
+            <view class="Listcontent">
+                <view>
+                    <view class="corporation">
+                        <view class="tag">科</view>
+                        <view>
+                            <view class="name">农业科学院</view>
+                            <view class="time">09-03 16:50</view>
+                        </view>
+                    </view>
+                    <view class="article" bindtap="toIntelligenceInfo">
+                        <view class="articleTitle">最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。</view>
+                        <view class="articleInfo">
+                            最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！
+                        </view>
+                        <view class="fullText">全文</view>
+                    </view>
+                </view>
+            </view>
+            <view class="addtion">
+                <view class="viewCount">172.6万阅读</view>
+                <view class="toolBar">
+                    <view>
+                        <text class="icon iconfont icon-dianzanquxiao zan"></text>
+                        <text>6</text>
+                    </view>
+                    <!-- <view>
+                        <view class="icon iconfont icon-pinglun"></view>
+                    </view>
+                    <view>
+                        <view class="icon iconfont icon-forward"></view>
+                    </view> -->
+                </view>
+            </view>
+        </view>
+       
+    </view>
+    
+
+</view>
+
+
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

@@ -1,0 +1,41 @@
+
+@import "/libs/icon/iconfont.wxss";
+.wrap{
+  background:#fff;
+  padding-left:50rpx;
+  margin-top:10rpx;
+}
+.list{
+  padding-left:10rpx;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.list{
+  border-bottom:1px solid #F5F5F5;
+  padding:30rpx;
+  font-weight: normal;
+  font-size:28rpx;
+}
+.list .center{
+  flex-grow:1;
+  color:#333;
+}
+.list .left{
+  padding:0 20rpx 0 10rpx ;
+  flex-shrink:0;
+  color:#CFCFCF;
+}
+.list .right{
+  padding:0 40rpx 0 40rpx ;
+  flex-shrink:0;
+   color:#CFCFCF;
+   font-size:inherit;
+}
+.all{
+  text-align: center;
+  color:#ADADAD;
+   padding:30rpx;
+   font-weight: normal;
+  font-size:28rpx;
+}

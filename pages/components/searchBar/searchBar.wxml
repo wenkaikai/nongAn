@@ -1,0 +1,9 @@
+<view class="wrap">
+  <view class="search-wrap">
+    <view class="icon iconfont icon-sousuo"></view> 
+    <view>
+     <input  placeholder="请输入" bindinput="change" value="{{value}}"/>
+    </view>
+  </view>
+  <view class="cancel" bindtap = "cancel">取消</view>
+</view>

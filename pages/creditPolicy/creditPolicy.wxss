@@ -1,0 +1,69 @@
+
+.information .title{
+    border-bottom:1px solid #ccc;
+    font-weight: bold;
+    padding:20rpx 30rpx;
+}
+.titleContent {
+    border-left:2px solid #0166B6;
+    padding-left:30rpx;
+    /* border-radius: 6rpx; */
+}
+.Listcontent{
+    padding:20rpx 30rpx;
+    font-size:28rpx;
+}
+.corporation{
+    display:flex;
+    margin-bottom:20rpx;
+}
+.corporation .tag{
+    height:80rpx;
+    width:80rpx;
+    background:#46C456;
+    border-radius:50%;
+    margin-right:20rpx;
+    color:#fff;
+    line-height: 80rpx;
+    text-align: center;
+}
+.articleTitle{
+    font-weight: bold;
+    margin-bottom:20rpx;
+}
+.articleInfo{
+
+}
+.fullText{
+    color:#117AFF;
+    border-bottom:1px solid #9b9b9b;
+    padding:20rpx 0;
+}
+.time{
+    font-size:24rpx;
+    color:#9b9b9b;
+}
+
+.addtion{
+    padding:20rpx 30rpx;
+    display:flex;
+    justify-content: space-between;
+    color:#989898;
+    align-items:center;
+    border-top:0;
+}
+.toolBar{
+    flex-basis: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.toolBar>view{
+    margin-left:20rpx;
+}
+.zan{
+    margin-right:10rpx;
+}
+.listWrap{
+    border-bottom:20rpx solid #F4F4F4;
+}

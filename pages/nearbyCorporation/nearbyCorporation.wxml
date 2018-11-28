@@ -1,0 +1,23 @@
+<view>
+    <view class="item" wx:for="{{obj}}" wx:key="index">
+        <view class="title">{{item.corporation}}</view>
+        <view class="content">
+            <view>
+                <view class="font-gray">注册时间</view>
+                <view>{{item.content.time}}</view>
+            </view>
+            <view>
+                <view class="font-gray">注册资金</view>
+                <view>{{item.content.registeredCapital}}万元</view>
+            </view>
+            <view>
+                <view  class="font-gray">法人代表</view>
+                <view>{{item.content.legalPerson}}</view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="icon iconfont icon-renzheng1"></view>
+            <view>信用分值:{{item.content.creditScore}}分</view>
+        </view>
+    </view>
+</view>

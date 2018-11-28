@@ -1,0 +1,48 @@
+<view>
+  <text>
+     项目主体字体颜色#4A4A4A
+      灰色的字体是#9B9B9B
+     
+  </text>
+</view>
+
+<view>
+  <text>
+   1,企业详情的主页
+  </text>
+  <text>
+  pages/enterprise/enterprise \n
+   (1) 企业基本信息
+   "com-baseInfo": ../components/enterpriseBaseInfo/enterpriseBaseInfo\n
+   （2）政府公示
+   "com-governmentPublicity": "../components/governmentPublicity/governmentPublicity"
+    （3）政府监管
+     "com-governmentSupervise": "../components/governmentSupervise/governmentSupervise",
+    （4） 内控信息
+    内部控制信息披露是企业信息披露一个重要的组成部分，是企业根据内部控制评价的标准对企业内部控制体系的完整性、合理性和有效性进行自我评价，再以报告的形式出具评价意见，让投资者判断企业的价值，以满足利益相关者合法权益的一种行为。
+    "com-innerControlInfo": "../components/innerControlInfo/innerControlInfo",
+    (5) 企业基本信息详情
+    "com-baseInfoDetails":"../components/baseInfoDetails/baseInfoDetails"
+  </text>
+  <view>
+    <text>
+      2,资质证照的列表页面
+    </text>
+      对于左边是图片右边是描叙的图文可以用这个组件
+     "pages/imageTextList/imageTextList"
+  </view>
+   <view>
+    <text>
+      3,纸质证照的详情页面里面的条目是写死的可以是动态的值吗
+    </text>
+     "pages/imageTextInfo/imageTextInfo"
+  </view>
+
+  <view>
+      <text>
+        4,行政监管
+      </text>
+      "pages/administrativeSupervision/administrativeSupervison"
+    </view>
+
+</view>

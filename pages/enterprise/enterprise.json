@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "com-baseInfo": "../components/enterpriseBaseInfo/enterpriseBaseInfo",
+    "com-governmentPublicity": "../components/governmentPublicity/governmentPublicity",
+    "com-governmentSupervise": "../components/governmentSupervise/governmentSupervise",
+    "com-innerControlInfo": "../components/innerControlInfo/innerControlInfo",
+    "com-baseInfoDetails":"../components/baseInfoDetails/baseInfoDetails"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "综合搜索",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

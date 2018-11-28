@@ -1,0 +1,15 @@
+
+<template name="generalInfoDetail">
+    <view class="top">
+        <view class="subTitle">{{subTitle}}</view>
+    </view>
+    <view class="bottom">
+        <view wx:for="{{content}}" wx:key="index" wx:for-item="item1">
+            <text>{{item1.title}}:</text>
+            <text>{{item1.content}}</text>
+        </view>
+        <slot name="image"></slot>
+    </view>
+</template>
+
+

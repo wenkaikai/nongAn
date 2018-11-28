@@ -1,0 +1,39 @@
+page{
+    background:#f8f8f8;
+    color:#4a4a4a;
+    font-size:28rpx;
+}
+
+.top{
+    background:#fff;
+    margin-bottom:30rpx;
+    padding:40rpx;
+}
+.num{
+    font-size:68rpx;
+    color:#46C456;
+}
+.bottom{
+    background:#fff;
+    padding:50rpx 30rpx;
+}
+.front{
+    color:#F5A623;
+    font-weight:bold;
+}
+.item{
+    margin-bottom:50rpx;
+}
+.rank{margin-bottom:20rpx;}
+.bar{
+    display:flex;
+    align-items:center;
+}
+.bar view:first-child{
+    width:80%;
+    height:20rpx;
+    background:#46C456;
+    margin-right:20rpx;
+    border-radius:4rpx;
+}
+

@@ -1,0 +1,101 @@
+/* pages/onlyShow/onlyShow.wxss */
+page{
+  background:#f8f8f8;
+  color:#4a4a4a;
+  font-size:28rpx;
+  padding-bottom:20rpx;
+}
+.common{
+  background:#fff;
+  padding:0 20rpx;
+
+}
+.listEmpty{
+  color:#ccc;
+  text-align: center;
+}
+.listEmpty view:first-child{
+  font-size:180rpx;
+  height:180rpx;
+  line-height: 180rpx;
+  margin:100rpx 0 15rpx 0;
+}
+.modifyRecord .time{
+  display:flex;
+  align-items:center;
+  padding:30rpx 0;
+}
+.modifyRecord .dot{
+  width:20rpx;
+  height:20rpx;
+  border-radius:50%;
+  background:#46c456;
+  margin-right:20rpx;
+}
+.modifyScope{
+  margin-left:20rpx;
+}
+.modifyRecord .content{
+  border:1px solid #ccc;
+  display:flex;
+   padding:30rpx 0;
+}
+.modifyRecord .content>view{
+ border-right:1px solid #ccc;
+}
+.modifyRecord>view{
+  flex:1 0 50%;
+}
+.modifyRecord .main{
+ padding:0 30rpx;
+}
+.modifyRecord .modifyTitle{
+  font-weight: bold;
+  margin:0 0 40rpx 20rpx;
+
+}
+.modifyScope{
+  font-weight: bold;
+  margin-bottom:40rpx;
+}
+.borderNoRight{
+  border-right:none!important
+}
+.subTitle{
+  text-align:center;
+  height:80rpx;
+  line-height:80rpx;
+  background:#fff;
+  margin-bottom:10rpx;
+  font-size:32rpx;
+  font-weight: bold;
+}
+
+/* 网站信息的css websiteRecords */
+
+.websiteRecords .lists{
+  border-bottom:1px solid #ccc;
+  color:#9b9b9b;
+}
+.websiteRecords .lists view{
+  padding: 10rpx 0;
+}
+.websiteRecords .lists .title{color:#4a4a4a}
+.location{
+  display:flex;
+  padding:30rpx;
+  align-items:center;
+}
+.location view:first-child{
+  margin-right:20rpx;
+  flex:0 0 20%;
+  font-size:32rpx;
+  white-space: nowrap;
+ 
+}
+.location view:last-child{
+  flex:1 0 80%;
+  white-space: pre-line;
+  font-size:28rpx;
+}
+

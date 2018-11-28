@@ -1,0 +1,30 @@
+<view class="wrap" bindtap='toInfo'>
+  <view class="image">
+    <image mode="aspectFit" src="http://www.hnjzt.com/wwwdoc/images/top_r2_c2.jpg"></image>
+  </view>
+  <view class="content">
+    <view class="certificateCategory">营业执照</view>
+    <view>档案编号：ZZ-748-5059-8342</view>
+    <view>证书编号：9137060061343021456</view>
+  </view>
+</view>
+<view class="wrap">
+  <view class="image">
+    <image mode="aspectFit" src="http://www.hnjzt.com/wwwdoc/images/top_r2_c2.jpg"></image>
+  </view>
+  <view class="content">
+    <view class="certificateCategory">营业执照</view>
+    <view>档案编号：ZZ-748-5059-8342</view>
+    <view>证书编号：9137060061343021456</view>
+  </view>
+</view>
+<view class="wrap">
+  <view class="image">
+    <image mode="aspectFit" src="http://www.hnjzt.com/wwwdoc/images/top_r2_c2.jpg"></image>
+  </view>
+  <view class="content">
+    <view class="certificateCategory">营业执照</view>
+    <view>档案编号：ZZ-748-5059-8342</view>
+    <view>证书编号：9137060061343021456</view>
+  </view>
+</view>

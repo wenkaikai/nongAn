@@ -1,0 +1,22 @@
+/* pages/titleText/titleText.wxss */
+#picture{
+  display:flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+ #picture .title{
+  font-weight: bold;
+  border:none;
+}
+ #picture .list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  padding:0;
+
+}
+#picture .list image{
+  width:200rpx;
+  height:200rpx;
+  margin:15rpx;
+}

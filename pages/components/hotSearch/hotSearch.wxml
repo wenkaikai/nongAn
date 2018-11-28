@@ -1,0 +1,11 @@
+<!--pages/components/hotSearch/hotSearch.wxml-->
+<view class="showed">
+  <view class="title">
+    <view class="line"></view>
+    <view>热门搜索</view>
+    <view class="line"></view>
+  </view>
+  <view class="hotSearch">
+    <view wx:for="{{hotData}}" wx:key="index" wx:for-item = "item" bindtap="toSearchList" data-content="{{item}}">{{item}}</view>
+  </view>
+</view>

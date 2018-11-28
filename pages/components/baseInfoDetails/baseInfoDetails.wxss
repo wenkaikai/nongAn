@@ -1,0 +1,20 @@
+/* pages/components/baseInfoDetails/baseInfoDetails.wxss */
+@import"/app.wxss";
+.listItem{
+  border-top:1px solid #ccc;
+  display:flex;
+  color:#4A4A4A;
+  padding:30rpx 0;
+  align-items:center;
+}
+.listItem .font-green{
+  margin-right:30rpx;
+}
+.listItem:last-child{
+    justify-content: space-between;
+
+
+}
+.listItem:last-child>view:first-child{
+    display:flex;
+}

@@ -1,0 +1,12 @@
+<view>
+  <view class="top">
+    <view>{{obj.listTitle}}</view>
+    <view>
+        <text>{{obj.releaseMedia}}</text>
+        <text>{{obj.time}}</text>
+    </view>
+  </view>
+  <view wx:for="{{obj.content}}" wx:key="index" class="bottom">
+    <image src="{{item}}" mode="aspectFit" bindtap="previewImg"></image>
+  </view>
+</view>

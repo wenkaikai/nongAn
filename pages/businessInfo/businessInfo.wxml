@@ -1,0 +1,71 @@
+<import src="./baseInfo.wxml"/>
+<import src="./shareholder.wxml"/>
+<import src="./mainMembers.wxml"/>
+<import src="./modifyRecord.wxml"/>
+<import src="./affiliation.wxml"/>
+<!-- 公司的基本信息 -->
+<view class="wrap">
+  <view class="top" data-id = "0" bindtap="toggleShow" >
+    <view>
+      <view> 基础信息 </view>
+      <view class="badge">12</view>
+    </view>
+    <view  class="icon iconfont icon-iconfontyoujiantou-copy {{listShow[0]? 'arrowDown' : 'arrowUp'}}"></view>
+  </view>
+  <view class="bottom baseInfo {{listShow[0]? 'fadeIn' : 'fadeOut'}}">
+      <template is="baseInfo"></template>
+  </view>
+</view>
+<!-- 股东 -->
+<view class="wrap">
+  <view class="top" data-id = "1" bindtap="toggleShow">
+    <view>
+      <view> 股东 </view>
+      <view class="badge">120</view>
+    </view>
+    <view  class="icon iconfont icon-iconfontyoujiantou-copy {{listShow[1]? 'arrowDown' : 'arrowUp'}}"></view>
+  </view>
+  <view class="bottom {{listShow[1]? 'fadeIn' : 'fadeOut'}}">
+      <template is="shareholder"></template>
+       <template is="shareholder"></template>
+  </view>
+</view>
+<!-- 主要成员 -->
+<view class="wrap">
+  <view class="top" data-id = "2" bindtap="toggleShow">
+    <view>
+      <view> 主要成员 </view>
+      <view class="badge">120</view>
+    </view>
+    <view  class="icon iconfont icon-iconfontyoujiantou-copy {{listShow[2]? 'arrowDown' : 'arrowUp'}}"></view>
+  </view>
+  <view class="bottom mainMembers  {{listShow[2]? 'fadeIn' : 'fadeOut'}}">
+      <template is="mainMembers"></template>
+  </view>
+</view>
+<!-- 变更记录 -->
+<view class="wrap">
+  <view class="top" data-id = "3" bindtap="toggleShow">
+    <view>
+      <view> 变更记录 </view>
+      <view class="badge">120</view>
+    </view>
+    <view  class="icon iconfont icon-iconfontyoujiantou-copy {{listShow[3]? 'arrowDown' : 'arrowUp'}}"></view>
+  </view>
+  <view class="bottom modifyRecord {{listShow[3]? 'fadeIn' : 'fadeOut'}}">
+      <template is="modifyRecord"></template>
+  </view>
+</view>
+<!-- 分支机构 -->
+<view class="wrap">
+  <view class="top" data-id = "4" bindtap="toggleShow">
+    <view>
+      <view> 分支机构 </view>
+      <view class="badge">1200</view>
+    </view>
+    <view  class="icon iconfont icon-iconfontyoujiantou-copy {{listShow[4]? 'arrowDown' : 'arrowUp'}}"></view>
+  </view>
+  <view class="bottom affiliation {{listShow[4]? 'fadeIn' : 'fadeOut'}}">
+      <template is="affiliation"></template>
+  </view>
+</view>

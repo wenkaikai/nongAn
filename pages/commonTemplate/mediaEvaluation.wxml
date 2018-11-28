@@ -1,0 +1,44 @@
+<template name="mediaEvaluation">
+  <view class="top">
+    <view class="subTitle">{{column}}</view>
+    <view class="tab" >
+      <view bindtap="changeTab" wx:for="{{objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
+        <view>{{item.label}}</view>
+        <view>({{item.num}})</view>
+      </view>
+    </view>
+    <view class="totalInfo">
+      共搜索到<text>{{totalNum}}</text>条信息
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="empty"></view>
+    <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{objArray}}" hidden="{{!item1.isShow}}"  wx:key="index" wx:for-item="item1">
+        <view class="contentList"  
+          wx:if="{{item1.content.length>0}}"
+          wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+          data-item-id="{{item2.itemId}}"
+          data-info-url="{{item2.url}}"
+          bindtap="toInfo"
+          >
+            <view>
+              <view>{{item2.title}}</view>
+              <view 
+              class="label {{item2.label=='良好'?'success':item2.label=='中性'?'warning':'danger'}}"
+              >{{item2.label}}</view>
+            </view>
+            <view>
+              <view>发布媒体 : {{item2.releaseMedia}}</view>
+              <view>{{item2.time}}</view>
+            </view>
+        </view>
+        <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+            <view class="icon iconfont icon-empty">
+            </view>
+            <text decode="true">
+              暂时还没有内容&emsp;
+            </text>
+        </view>
+    </view>
+  </view>
+</template>

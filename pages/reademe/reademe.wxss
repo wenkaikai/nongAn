@@ -1,0 +1,15 @@
+/* pages/reademe/reademe.wxss */
+page{
+  padding:0 20rpx;
+ 
+}
+view text{
+  display: block;
+  white-space: pre-line;
+  word-break:break-all;
+   padding:0 20rpx;
+}
+view text:first-of-type{
+  color:#f60;
+  font-weight:600;
+}

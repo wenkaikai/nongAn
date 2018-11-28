@@ -1,0 +1,38 @@
+<view class="module-wrap bg-white mb-20">
+  <view class="name pt-40 mb-20"> 杭州新洲生态农业开发有限公司</view>
+  <view class="font-green">存续（在营 开业）</view> 
+  <view class="font-gray mb-20">优先责任公司（非自然人投资或控股的法人独）</view>
+  <view>
+    <text class="font-black">信用分值：</text>
+    <text class="font-num">95.0</text>
+  </view>
+  <view class="mb-20">
+    <text class="font-black">社会统一信用代码：</text>
+    <text class="font-green">93310120343M</text>
+  </view>
+  <view class="mainInfo">
+    <view>
+      <view class="font-gray mb-10">成立时间</view>
+      <view class="font-semiblack">1992-11-29</view>
+    </view>
+    <view>  
+      <view class="font-gray mb-10">注册资金</view>
+      <view class="font-semiblack">351.26万元</view>
+    </view>
+    <view>
+      <view class="font-gray mb-10">法定代表人</view>
+      <view class="font-green">赵丽颖</view>
+    </view>
+     <view class="border-noRight">
+      <view class="invoiceBtn">发票信息</view>
+    </view>
+  </view>
+  <view class="phone">
+    <view class="icon iconfont icon-dianhua font-green"></view>
+    <view class="font-green pl-20" bindtap="callPhone" data-phone-number="13673368965">13673368965</view>
+    <view  bindtap="toggleBaseInfo">
+     <view class="icon iconfont icon-iconfontyoujiantou-copy font-gray {{slidDown? 'slidDown':'slidUp'}}"></view>
+    </view>
+  </view>
+  <slot></slot>
+</view>

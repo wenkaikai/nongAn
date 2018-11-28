@@ -1,0 +1,19 @@
+<!-- 
+  可以作为一个公用的组件
+  类似于  aaa   bbb 这样的title  text 的
+  
+ -->
+ <!-- 溯源信息 -->
+ <import src="/pages/commonTemplate/traceInfoDetail"/>
+<!-- 一般的模板 -->
+ <import src="/pages/commonTemplate/generalInfoDetail"/>
+
+ <block wx:if="{{options.subTitle=='溯源信息'||options.subTitle=='开具合格证'||options.subTitle=='红黑榜'}}">
+    <template is="traceInfoDetail" data="{{...options}}"></template>
+ </block>
+ <blcok wx:else>
+    <template is="generalInfoDetail" data="{{...options}}"></template>
+ </blcok>
+
+ 
+

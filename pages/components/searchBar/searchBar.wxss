@@ -1,0 +1,29 @@
+/* pages/components/searchBar/searchBar.wxss */
+@import "/libs/icon/iconfont.wxss";
+.wrap{
+  display:flex;
+  padding:20rpx 50rpx;
+  justify-content:space-between;
+  flex-direction: row;
+  align-items:center;
+  background:#fff;
+}
+.search-wrap{
+  border-radius:25px;
+  background:#F8F8F8;
+  flex-grow:1;
+  display:flex;
+  align-items:center;
+  padding:0 30rpx;
+}
+.search-wrap{
+  height:70rpx;
+}
+.search-wrap input{
+    margin-left:20rpx;
+}
+.cancel{
+  margin-left:50rpx;
+  color:#ADADAD;
+  flex-shrink: 0;
+}

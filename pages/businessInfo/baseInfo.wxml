@@ -1,0 +1,14 @@
+<template name="baseInfo">
+  <view>
+    <text>法定代表人</text>
+    <text>高振坤</text>
+  </view>
+  <view>
+    <text>成立日期</text>
+    <text>1997-06-06</text>
+  </view>
+  <view>
+    <text>注册资本</text>
+    <text>156246464万亿人民币</text>
+  </view>
+</template>  

@@ -1,0 +1,17 @@
+<view>
+  <com-titleText options="{{obj}}" >
+    <block wx:if="{{obj.subTitle=='执法日志'||obj.subTitle=='巡查日志'}}">
+      <view slot="image">
+        <view id="picture">
+            <view class="title">现场照片</view>
+            <view class="list">
+              <image src="https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg" mode="aspectFit" bindtap="previewImg"></image>
+              <image src="https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg" mode="aspectFit" bindtap="previewImg"></image>
+              <image src="https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg" mode="aspectFit" bindtap="previewImg"></image>
+              <image src="https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg" mode="aspectFit" bindtap="previewImg"></image>
+            </view>
+        </view>
+      </view>
+    </block>
+  </com-titleText>
+</view>

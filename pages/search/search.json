@@ -1,0 +1,13 @@
+{
+"usingComponents": {
+  "com-searchBar": "../components/searchBar/searchBar",
+  "com-history": "../components/searchHistory/searchHistory",
+  "com-hotSearch": "../components/hotSearch/hotSearch",
+  "com-searchResult":"../components/searchResult/searchResult"
+},
+ "navigationBarBackgroundColor": "#ffffff",
+"navigationBarTextStyle": "black",
+"navigationBarTitleText": "综合搜索",
+"backgroundColor": "#eeeeee",
+"backgroundTextStyle": "light"
+}

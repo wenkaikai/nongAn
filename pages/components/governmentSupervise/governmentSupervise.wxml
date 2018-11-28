@@ -1,0 +1,65 @@
+<view class="module-wrap bg-white mb-20">
+  <view class="module-title">
+    政府监管
+  </view>
+  <view class="row">
+    <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">纸质证照</view>
+      </view>
+    </view>
+     <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">工商信息</view>
+      </view>
+    </view>
+     <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">行政监管</view>
+      </view>
+    </view>
+     <view class="border-noRight">
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">双公示</view>
+      </view>
+    </view>
+  </view>
+  <view class="row">
+    <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">历史变更</view>
+      </view>
+    </view>
+     <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">质量检查</view>
+      </view>
+     </view>
+     <view>
+      <view class="font-green text-right fontSize-24">51</view>
+      <view>
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">网站备案</view>
+      </view>
+     </view>
+     <view class="border-noRight">
+      <view class="font-green text-right fontSize-24">51</view>
+      <view >
+        <view class="icon iconfont icon-teshurenqun font-green mb-10"></view>
+        <view class="font-666">地理位置</view>
+      </view>
+     </view>
+  </view>
+</view>

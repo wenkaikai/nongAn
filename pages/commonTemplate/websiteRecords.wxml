@@ -1,0 +1,16 @@
+<template name="websiteRecords">
+
+  <view wx:if="{{objArray.length>0}}" wx:for="{{objArray}}" class="lists" wx:key="index">
+    <view class="title">{{item.title}}</view>
+    <view class="">{{item.websiteName}}</view>
+    <view class="">{{item.domain}}</view>
+    <view class="">{{item.time}}</view>
+    <view class="">{{item.licence}}</view>
+  </view>
+  <view wx:if="{{objArray.length==0}}" class="listEmpty" >
+    <view class="icon iconfont icon-empty"></view>
+    <text decode="true">
+      暂时还没有内容&emsp;
+    </text>
+  </view>
+</template>

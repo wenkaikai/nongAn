@@ -1,0 +1,3 @@
+<!--pages/tapList/tapList.wxml-->
+<import src="../commonTemplate/judiciaryInfo.wxml"/>
+<template is="judiciaryInfo" data="{{...obj}}"></template>

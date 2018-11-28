@@ -1,0 +1,27 @@
+<!--pages/components/searchResult/searchResult.wxml-->
+
+<view class="out showed">
+  <view class="total">共找到相关公司 <text>{{25000}}</text> 家</view>
+  <view class="wrap">
+    <view class="list" bindtap="toInfo">
+      <view class="img">
+        <image src="http://www.hnjzt.com/wwwdoc/images/top_r2_c2.jpg" mode='aspectFit'></image>
+      </view>
+      <view class="content">
+        <view>九芝堂中国股份有限公司</view>
+        <view class="infos">
+          法人张国立 | 2025466亿人民币 | 1998年成立
+        </view>
+        <view class="tips">
+          <view>续存</view>
+          <view>制造业</view>
+          <view>Gmp</view>
+        </view>
+      </view>
+    </view>
+    <view class="empty">
+        <view class="icon iconfont icon-empty"></view>
+        <view class="content">暂无内容</view>
+    </view>
+  </view>
+</view>

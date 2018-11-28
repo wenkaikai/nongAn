@@ -1,0 +1,63 @@
+/* pages/components/searchResult/searchResult.wxss */
+@import "/libs/icon/iconfont.wxss";
+.out{
+  background:#fff;
+}
+.total{
+  background:#F5F5F5;
+  height:80rpx;
+  line-height: 80rpx;
+  padding-left:60rpx;
+  font-size:28rpx;
+}
+.total text{
+  color:#B7B7B7;
+}
+.list{
+  padding:20rpx;
+  display:flex;
+  justify-content:space-between;
+  font-size:28rpx;
+  color:#333;
+  border-bottom:1px solid #E5E5E5;
+  align-items:center;
+}
+.img{
+  width:116rpx;
+  height:116rpx;
+}
+.content{
+  display:flex;
+  flex-direction:column;
+}
+.tips{
+  display:flex;
+  align-items: center;
+}
+.tips view{
+  border:1px solid #46C456;
+  color:#46C456;
+  border-radius: 50rpx;
+  padding:10rpx 40rpx;
+  margin-right:20rpx;
+}
+.infos{
+  color:#ADADAD;
+  font-size:24rpx;
+  margin:30rpx 0;
+}
+image{
+  width:100%;
+  height:100%;
+}
+
+.empty{
+    color:#ccc;
+    text-align: center;
+}
+.empty .icon{
+  font-size:180rpx;
+  height:180rpx;
+  line-height: 180rpx;
+  margin:100rpx 0 15rpx 0;
+}

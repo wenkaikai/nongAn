@@ -1,0 +1,64 @@
+/**app.wxss**/
+@import "/libs/icon/iconfont.wxss";
+.container {
+  
+} 
+.mb-20{
+  margin-bottom:20rpx;
+}
+.mb-10{
+  margin-bottom:10rpx;
+}
+.bg-gray{
+  background:#F8F8F8;
+}
+.font-gray{
+  color:#9B9B9B!important;
+}
+.font-black{
+  color:#424242;
+  font-weight:600;
+}
+.font-semiblack{
+  color:#424242;
+}
+.font-num{
+  color:#f60;
+}
+.mt-40{
+  margin-top:40rpx;
+}
+
+.pt-40{
+  padding-top:40rpx;
+}
+.pl-20{
+  padding-left:20rpx!important;
+}
+.font-green{
+  color:#46C456
+}
+.bg-white{
+  background:#fff;
+}
+.border-noRight{
+  border-right:none!important;
+}
+.module-wrap{
+  padding: 0 30rpx;
+}
+.module-title{
+  color:#4A4A4A;
+  font-size:30rpx;
+  padding:30rpx 0;
+  font-weight: bold;
+}
+.text-right{
+  text-align:right;
+}
+.fontSize-24{
+  font-size:24rpx;
+}
+.font-666{
+  color:#666;
+}

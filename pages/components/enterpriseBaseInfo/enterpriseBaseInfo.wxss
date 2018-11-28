@@ -1,0 +1,68 @@
+/* pages/components/enterpriseBaseInfo/enterpriseBaseInfo.wxss */
+@import "/app.wxss";
+page{
+  background:#F8F8F8;
+  font-size:26rpx;
+}
+.name{
+  color:#424242;
+  font-size:40rpx;
+  font-weight:600;
+}
+.mainInfo{
+  display:flex;
+  align-items:center;
+  padding:20rpx 0;
+  justify-content: flex-start;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.mainInfo > view{
+  flex-basis: 25%;
+  border-right:1px solid #ccc;
+  padding:0 12rpx;
+  box-sizing: border-box;
+} 
+.mainInfo > view >view:last-child{
+    font-size:24rpx;
+}
+.module-wrap{
+  padding:0 30rpx;
+}
+.invoiceBtn{
+  color:#fff;
+  border-radius:50rpx;
+  background:#46C456;
+  padding:10rpx 20rpx;
+  white-space: nowrap;
+  text-align:center;
+}
+.phone{
+  display:flex;
+  justify-content:space-between;
+}
+.phone>view{
+  flex-grow:1;
+  padding:20rpx 0;
+}
+.phone>view:first-child,.phone>view:last-child{
+  flex-shrink:0;
+  flex-grow:0;
+}
+.phone>view:last-child{
+    flex-basis: 20%;
+    text-align: right;
+    display:flex;
+    justify-content: flex-end;
+}
+/* .phone>view:last-child view{
+
+} */
+.slidDown{
+    transform:rotate(90deg);
+    transition:transform .3s;
+}
+.slidUp{
+    transform:rotate(0deg);
+    transition:transform .3s;
+}

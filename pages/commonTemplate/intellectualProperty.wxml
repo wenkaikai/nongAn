@@ -1,0 +1,39 @@
+<template name="intellectualProperty">
+  <view class="top noTab">
+   <!-- <view class="subTitle">{{column}}</view> -->
+  </view>
+  <view class="bottom noTab">
+    <view class="empty"></view>
+    <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
+        <view class="contentList"  
+          wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+          wx:if="{{item1.content.length>0}}"
+          data-item-id="{{item2.itemId}}"
+          data-info-url="{{item2.url}}"
+          bindtap="toInfo"
+          >
+            <block>
+                <view>
+                    <view>{{item2.title}}</view>
+                    <view class="label success">{{item2.label}}</view>
+                </view>
+                <view class="intellectualProperty">
+                    <view>档案文号 : {{item2.recordId}}</view>
+                    <view>{{item2.time}}</view>
+                </view>
+                <view>
+                </view>
+            </block>
+        </view>
+        <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+            <view class="icon iconfont icon-empty">
+            </view>
+            <text decode="true">
+              暂时还没有内容&emsp;
+            </text>
+        </view>
+    </view>
+  </view>
+</template>
+
+

@@ -1,0 +1,18 @@
+<!--pages/enterprise/enterprise.wxml-->
+<view>
+  <com-baseInfo bind:toggleBaseInfo="isShow">
+    <!-- 企业信息详情 -->
+    <com-baseInfoDetails showed="{{DetailIsShow?'com-show':'com-hide'}}"></com-baseInfoDetails>
+  </com-baseInfo>   
+  <view>
+    <!-- 政府公示 -->
+    <com-governmentPublicity 
+    wx:for="{{allObj}}" wx:key ="title" wx:for-item="comItem" wx:for-index="comIndex" 
+    sub-obj="{{comItem}}"
+    >
+        <!-- toast 提示 -->
+        <van-toast id="van-toast" />
+    </com-governmentPublicity>
+  </view>
+</view>
+

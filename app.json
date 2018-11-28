@@ -1,0 +1,34 @@
+{
+    "pages": [
+        "pages/search/search",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/enterprise/enterprise",
+        "pages/reademe/reademe",
+        "pages/imageTextList/imageTextList",
+        "pages/imageTextInfo/imageTextInfo",
+        "pages/businessInfo/businessInfo",
+        "pages/administrativeSupervision/administrativeSupervision",
+        "pages/titleText/titleText",
+        "pages/comTab/comTab",
+        "pages/onlyShow/onlyShow",
+        "pages/mediaText/mediaText",
+        "pages/tapList/tapList",
+        "pages/creditOptimization/creditOptimization",
+        "pages/cityRanking/cityRanking",
+        "pages/creditPolicy/creditPolicy",
+        "pages/nearbyCorporation/nearbyCorporation",
+        "pages/corporationInfo/corporationInfo",
+        "pages/intelligenceInfo/intelligenceInfo"
+    ],
+    "window": {
+        "navigationBarTitleText": "农安信用",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#333",
+        "navigationBarTextStyle": "#fff"
+    },
+    "usingComponents": {
+        "van-toast": "/dist/toast/index",
+        "van-notify": "/dist/notify/index"
+    }
+}

@@ -1,0 +1,26 @@
+<view class="module-wrap bg-white mb-20">
+  <view class="module-title" >
+   {{subObj.title}}
+  </view>
+  <view class="row" wx:for="{{subObj.list}}" wx:for-item="item1" wx:key="index">
+    <!-- <view wx:for="{{item1}}" wx:for-item="item2" wx:key="subTitle" bindtap="toInfo(,subObj.corporation,item2.path,item2.isTap)"> -->
+     <view 
+     wx:for="{{item1}}" wx:for-item="item2" wx:key="subTitle"
+     data-id = "{{subObj.id}}"
+     data-corporation = "{{subObj.corporation}}"
+     data-path = "{{item2.path}}"
+     data-is-tap="{{item2.isTap}}"
+     data-sub-title="{{item2.subTitle}}"
+      bindtap="toInfo"
+     >
+      <view class="{{!item2.isTap?'font-gray':'font-green'}} text-right fontSize-24">{{item2.num}}</view>
+      <view>
+        <view class="icon iconfont  {{item2.icon}} {{!item2.isTap?'font-gray':'font-green'}} mb-10 "></view>
+        <view class=" {{!item2.isTap?'font-gray':'font-666'}} ">{{item2.subTitle}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<slot/>
+
+
