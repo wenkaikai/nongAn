@@ -19,6 +19,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(options)
         let id = options.id// 企业的id
         let subTitle = options.subTitle;// 点击的是哪一个子目录
         let corporation = options.corporation ? options.corporation : '农安信用';

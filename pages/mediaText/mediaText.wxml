@@ -6,7 +6,10 @@
         <text>{{obj.time}}</text>
     </view>
   </view>
-  <view wx:for="{{obj.content}}" wx:key="index" class="bottom">
-    <image src="{{item}}" mode="aspectFit" bindtap="previewImg"></image>
+  <view  class="bottom content">
+    <text>
+    {{obj.content}}
+    </text>
+   
   </view>
 </view>

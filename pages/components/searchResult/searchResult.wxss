@@ -4,7 +4,7 @@
   background:#fff;
 }
 .total{
-  background:#F5F5F5;
+  background:#f8f8f8;
   height:80rpx;
   line-height: 80rpx;
   padding-left:60rpx;
@@ -16,7 +16,6 @@
 .list{
   padding:20rpx;
   display:flex;
-  justify-content:space-between;
   font-size:28rpx;
   color:#333;
   border-bottom:1px solid #E5E5E5;
@@ -25,6 +24,8 @@
 .img{
   width:116rpx;
   height:116rpx;
+  margin-right:40rpx;
+  flex-shrink:0;
 }
 .content{
   display:flex;
@@ -38,13 +39,15 @@
   border:1px solid #46C456;
   color:#46C456;
   border-radius: 50rpx;
-  padding:10rpx 40rpx;
+  padding:3px 20rpx;
   margin-right:20rpx;
+  white-space:nowrap;
+  font-size:24rpx;
 }
 .infos{
   color:#ADADAD;
   font-size:24rpx;
-  margin:30rpx 0;
+  margin:20rpx 0;
 }
 image{
   width:100%;
@@ -54,10 +57,17 @@ image{
 .empty{
     color:#ccc;
     text-align: center;
+    background:#fcfcfc;
+    margin-top:250rpx;
+
 }
 .empty .icon{
   font-size:180rpx;
   height:180rpx;
   line-height: 180rpx;
   margin:100rpx 0 15rpx 0;
+}
+.fontRed{
+    color:#f44;
+   font-weight: bold;
 }

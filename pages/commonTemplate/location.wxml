@@ -1,16 +1,21 @@
 <template name="location">
-  <view>
-   <map
-      id="myMap"
-      style="width: 100%; height: 300px;"
-      latitude="{{latitude}}"
-      longitude="{{longitude}}"
-      markers="{{markers}}"
-      show-location
-    ></map>
-    <view class="location">
-      <view>详细地址:</view>
-      <view>{{detailAddresss}}</view>
-    </view>
+  <view style="margin:0;">
+            <map
+            id="myMap"
+            style="width: 100%; height: 900rpx;"
+            latitude="{{latitude}}"
+            longitude="{{longitude}}"
+            markers="{{markers}}"
+            show-location
+        >
+        </map>
+        <view class="location">
+        <view>详细地址:</view>
+        <view>{{detailAddresss}}</view>
+        </view>
+        <view class="location latLng">
+        <view>坐标经纬度:</view>
+        <view>{{longitude}} , {{latitude}}</view>
+        </view>
   </view>
 </template>

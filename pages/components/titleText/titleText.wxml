@@ -8,7 +8,7 @@
 <!-- 一般的模板 -->
  <import src="/pages/commonTemplate/generalInfoDetail"/>
 
- <block wx:if="{{options.subTitle=='溯源信息'||options.subTitle=='开具合格证'||options.subTitle=='红黑榜'}}">
+ <block wx:if="{{options.subTitle=='溯源信息'||options.subTitle=='开具合格证'||options.subTitle=='红黑榜'||options.subTitle=='无公害产品'||options.subTitle=='绿色食品'||options.subTitle=='地理标志产品'||options.subTitle=='有机产品'}}">
     <template is="traceInfoDetail" data="{{...options}}"></template>
  </block>
  <blcok wx:else>

@@ -1,9 +1,9 @@
 page{
-    background:#f8f8f8;
+    background:#f2f2f2;
 }
 .item{
     background: #fff;
-    margin-top:30rpx;
+    margin-top:20rpx;
     padding:0 30rpx;
     color:#4a4a4a;
     display: flex;
@@ -26,7 +26,7 @@ page{
 }
 .content>view{
  flex:0 0 33%;
- border-right:1px solid #ccc;
+ border-right:1px solid #F1F1F1;
  box-sizing:border-box;
  text-align: center;
 }
@@ -36,10 +36,23 @@ page{
 .bottom{
     padding:20rpx 0;
     margin-bottom:0rpx!important;
-    border-top:1px solid #ccc;
+    border-top:1px solid #F1F1F1;
     display:flex;
 }
 .bottom .icon{
-    color:#ff0;
+    color:#46C456;
     margin-right:30rpx;
+}
+.empty{
+    color:#ccc;
+    text-align: center;
+    background:#f2f2f2;
+    margin-top:250rpx;
+
+}
+.empty .icon{
+  font-size:180rpx;
+  height:180rpx;
+  line-height: 180rpx;
+  margin:100rpx 0 15rpx 0;
 }

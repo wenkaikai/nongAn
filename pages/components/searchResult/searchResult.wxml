@@ -1,25 +1,31 @@
 <!--pages/components/searchResult/searchResult.wxml-->
 
 <view class="out showed">
-  <view class="total">共找到相关公司 <text>{{25000}}</text> 家</view>
+  <view class="total" wx:if="{{objList.list.length>0}}">共找到相关公司 <text>{{objList.total}}</text> 家</view>
   <view class="wrap">
-    <view class="list" bindtap="toInfo">
-      <view class="img">
-        <image src="http://www.hnjzt.com/wwwdoc/images/top_r2_c2.jpg" mode='aspectFit'></image>
-      </view>
-      <view class="content">
-        <view>九芝堂中国股份有限公司</view>
-        <view class="infos">
-          法人张国立 | 2025466亿人民币 | 1998年成立
-        </view>
-        <view class="tips">
-          <view>续存</view>
-          <view>制造业</view>
-          <view>Gmp</view>
-        </view>
-      </view>
+    <view  wx:if="{{objList.list.length>0}}" wx:for="{{objList.list}}" wx:key="index" wx:for-item="item1">
+        <navigator  class="list" url="/pages/enterprise/enterprise?corporation={{item1.Name}}">
+            <view class="img">
+                <image src="{{item1.ImageUrl}}" mode='aspectFit'></image>
+            </view>
+            <view class="content">
+                <view>
+                    <view>
+                        {{item1.Name}}
+                    </view>
+                    <!-- <rich-text nodes=""></rich-text> -->
+                </view>
+                <view class="infos">
+                法人{{item1.OperName}} | {{item1.RegistCapi}} | {{item1.StartDate}}
+                </view>
+                <view class="tips">
+                    <view  wx:if="{{item1.ShortStatus}}">{{item1.ShortStatus}}</view>
+                    <view  wx:if="{{item1.Industry.Industry}}">{{item1.Industry.Industry}}</view>
+                </view>
+            </view>
+        </navigator>
     </view>
-    <view class="empty">
+    <view class="empty"  wx:if="{{objList.list.length==0}}">
         <view class="icon iconfont icon-empty"></view>
         <view class="content">暂无内容</view>
     </view>

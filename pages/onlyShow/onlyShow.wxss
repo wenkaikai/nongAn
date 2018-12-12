@@ -1,6 +1,6 @@
 /* pages/onlyShow/onlyShow.wxss */
 page{
-  background:#f8f8f8;
+  background:#f2f2f2;
   color:#4a4a4a;
   font-size:28rpx;
   padding-bottom:20rpx;
@@ -80,11 +80,26 @@ page{
 .websiteRecords .lists view{
   padding: 10rpx 0;
 }
+.websiteRecords > view:last-child{
+    border-bottom:none;
+}
 .websiteRecords .lists .title{color:#4a4a4a}
+
+.siteLocation{
+    display:flex;
+    flex-direction:column;
+}
+.siteLocation>view:first-of-type{
+    flex-grow:1;
+}
+.siteLocation>view:last-of-type{
+    flex-shrink:0;
+}
 .location{
   display:flex;
   padding:30rpx;
   align-items:center;
+  height:100%;
 }
 .location view:first-child{
   margin-right:20rpx;
@@ -98,4 +113,6 @@ page{
   white-space: pre-line;
   font-size:28rpx;
 }
-
+.latLng{
+    padding:0 30rpx;
+}

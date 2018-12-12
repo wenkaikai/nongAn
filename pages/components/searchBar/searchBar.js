@@ -28,10 +28,18 @@ Component({
         }
     },
     cancel(){
+        wx.navigateBack({
+            delta: 2
+        })
       this.setData({
         value:""
       })
       this.triggerEvent("cancel")// 触发父组件的取消让历史记录显示出来
+    },
+    delete(){
+        this.setData({
+            value: ""
+        })
     }
   }
 })

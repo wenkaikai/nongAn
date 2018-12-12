@@ -1,6 +1,7 @@
 /* pages/titleText/titleText.wxss */
 page{
     padding:30rpx;
+    box-sizing: border-box;
 }
 .top view{
     margin-bottom:30rpx;
@@ -9,4 +10,9 @@ page{
     margin-right:30rpx;
     color:#9b9b9b;
     margin-bottom:30rpx;
+}
+.content{
+    color:#333;
+    font-size:28rpx;
+    line-height:50rpx;
 }

@@ -1,14 +1,13 @@
 /* pages/components/governmentPublicity/govermentPublicity.wxss */
 @import "/app.wxss";
 .row{
-  border-top:1px solid #ccc;
+  border-top:1px solid #DADADA;
   display:flex;
   padding:30rpx 0;
 }
 .row>view{
-  border-right:1px solid #ccc;
+  border-right:1px solid #DADADA;
   text-align:center;
-  padding:0 30rpx;
   width:25%;
   box-sizing:border-box
 }
@@ -17,4 +16,9 @@
 }
 .icon{
     font-size:50rpx;
+}
+.number {
+    box-sizing:border-box;
+    padding-right:30rpx;
+    height:32rpx;
 }

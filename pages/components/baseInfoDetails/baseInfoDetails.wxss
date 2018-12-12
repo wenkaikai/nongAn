@@ -1,7 +1,7 @@
 /* pages/components/baseInfoDetails/baseInfoDetails.wxss */
 @import"/app.wxss";
 .listItem{
-  border-top:1px solid #ccc;
+  border-top:1px solid #EAEAEA;
   display:flex;
   color:#4A4A4A;
   padding:30rpx 0;

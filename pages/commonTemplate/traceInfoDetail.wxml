@@ -10,7 +10,7 @@
             <view  class="tableRow" wx:for="{{item1.listContent}}" wx:key="index" wx:for-item="item2">
                 <block wx:if="{{item2.type=='text'}}">
                     <view>{{item2.title}}</view>
-                    <view>{{item2.content}}</view>
+                    <view>{{item2.content=="null"?"--":item2.content}}</view>
                 </block>
                 <block wx:else>
                     <view>{{item2.title}}</view>

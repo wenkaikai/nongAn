@@ -4,7 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+      'obj':{
+          type:Object
+      }
   },
 
   /**
@@ -12,6 +14,7 @@ Component({
    */
   data: {
       slidDown:false// 初始化的时候是false 就是隐藏的
+      ,showInvoice:false
   },
 
   /**
@@ -29,6 +32,16 @@ Component({
               phoneNumber: e.currentTarget.dataset.phoneNumber 
           })
          
+      },
+      showInvoice(){
+          this.setData({
+              showInvoice: true
+          })
+      },
+      closeInvoice(){
+          this.setData({
+              showInvoice: false
+          })
       }
   }
 })

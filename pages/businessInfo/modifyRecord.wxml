@@ -1,18 +1,18 @@
 <template name="modifyRecord">
-  <view>
+  <view wx:for="{{changeRecords}}" wx:key="index">
     <view class="time">
       <view class="dot"></view>
-      <view>2018-07-23</view>
+      <view>{{item.ChangeDate}}</view>
     </view>
-    <view class="modifyScope">经营范围</view>
+    <view class="modifyScope">{{item.ProjectName}}</view>
     <view class="content">
       <view class="before">
         <view class="modifyTitle">变更前</view>
-        <view class="main">问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果。</view>
+        <view class="main">{{item.BeforeContent?item.BeforeContent:"--"}}</view>
       </view>
       <view class="after borderNoRight">
         <view class="modifyTitle">变更后</view>
-        <view class="main ">问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果</view>
+        <view class="main ">{{item.AfterContent?item.AfterContent:"--"}}</view>
       </view>
     </view>
   </view>

@@ -12,31 +12,19 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let corporationId = options.id;// 公司的id
-        let litemId = options.itemId; // 是哪一条的id
-        let subTitle = options.subTitle;// 子标题
-        let corporation = options.corporation;// 公司的名字
-        let infoUrl = options.infoUrl;// 如果需要请求就要请求地址
+        let commonInfo = wx.getStorageSync("commonInfo");
         wx.setNavigationBarTitle({
-            title: corporation,
+            title: commonInfo.subTitle,
         })
-        let content = [
-            "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg"
-            ,"https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg"
-            , "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg"
-            , "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg"
-            , "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg"
-        ]
-        let listTitle="招远技术开发区商会j揭牌运行"
+        let content = commonInfo.file_content
+        let listTitle = commonInfo.title
         let newObj = {
-            corporationId: corporationId,
-            litemId: litemId,
-            subTitle: subTitle,
-            corporation: corporation,
+            litemId: commonInfo.itemId,
+            subTitle: commonInfo.subTitle,
             content: content,
             listTitle:listTitle,
-            releaseMedia:"水母网",
-            time:"2016-09-30"
+            releaseMedia: commonInfo.release_media,
+            time: commonInfo.pubdate
         }
         this.setData({
             obj: newObj

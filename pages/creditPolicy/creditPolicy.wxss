@@ -1,16 +1,17 @@
-
 .information .title{
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid #D3D3D3;
     font-weight: bold;
     padding:20rpx 30rpx;
+    display:flex;
+    align-items:center;
 }
 .titleContent {
-    border-left:2px solid #0166B6;
-    padding-left:30rpx;
-    /* border-radius: 6rpx; */
+    font-size:32rpx;
+    line-height:1;
+    margin-left:20rpx;
 }
 .Listcontent{
-    padding:20rpx 30rpx;
+    padding:20rpx 30rpx 0 30rpx;
     font-size:28rpx;
 }
 .corporation{
@@ -20,7 +21,7 @@
 .corporation .tag{
     height:80rpx;
     width:80rpx;
-    background:#46C456;
+    background:#F5A623;
     border-radius:50%;
     margin-right:20rpx;
     color:#fff;
@@ -36,7 +37,7 @@
 }
 .fullText{
     color:#117AFF;
-    border-bottom:1px solid #9b9b9b;
+    border-bottom:1px solid #F4F4F4;
     padding:20rpx 0;
 }
 .time{
@@ -45,7 +46,7 @@
 }
 
 .addtion{
-    padding:20rpx 30rpx;
+    padding:12rpx 30rpx;
     display:flex;
     justify-content: space-between;
     color:#989898;
@@ -64,6 +65,34 @@
 .zan{
     margin-right:10rpx;
 }
-.listWrap{
-    border-bottom:20rpx solid #F4F4F4;
+.icon-youxuan{
+    color:#1CA0F6;
+    font-size:70rpx;
+}
+.icon-zhengce{
+     color:#F5A623;
+    font-size:70rpx;
+}
+.icon-paihang1{
+    color:#1CA0F6;
+    font-size:70rpx;
+}
+.icon-dingwei{
+   color:#46C456;
+    font-size:70rpx; 
+}
+.verticalBar{
+    background:#0166B6;
+    width:6rpx;
+    height:30rpx;
+    border-radius:3px;
+}
+.item{
+    border-top:20rpx solid #F4F4F4;
+}
+.listWrap>view:nth-child(1){
+    border:none;
+}
+.active{
+    color:#46C456
 }

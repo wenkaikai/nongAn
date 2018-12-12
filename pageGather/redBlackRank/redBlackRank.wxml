@@ -1,0 +1,58 @@
+   <view class="top" wx:if="{{obj.objArray.length>1}}">
+        <view class="tab">
+           <view bindtap="changeTab" wx:for="{{obj.objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
+                <view>{{item.label}}</view>
+                <view>({{item.num}})</view>
+            </view>
+        </view>
+        <view class="totalInfo">
+            共搜索到<text>{{obj.totalNum}}</text>条信息
+        </view>
+   </view>
+  <view class="bottom {{obj.objArray.length==1?'noTab':''}}">
+    <view class="empty"></view>
+    <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{obj.objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
+        <view class="finallyList"  
+          wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+          wx:if="{{item1.content.length>0}}"
+          data-item-id="{{item2.itemId}}"
+          data-sub-title="{{item2.subTitle}}"
+          data-contact="{{item2.contact}}"
+          data-contact_number="{{item2.contact_number}}"
+          data-is_intranet="{{item2.is_intranet}}"
+          data-is_outer_net="{{item2.is_outer_net}}"
+          data-is_red_black="{{item2.is_red_black}}"
+          data-rank_list="{{item2.rank_list}}"
+          data-rank_reason="{{item2.rank_reason}}"
+          data-rank_time="{{item2.rank_time}}"
+          data-remark="{{item2.remark}}"
+          data-year="{{item2.year}}"
+          data-is_repeal="{{item2.is_repeal}}"
+          bindtap="toInfo"
+          >
+            <block>
+                <view class="contentLeft">
+                    <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                        <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                        <view >{{item3.content}}</view>
+                        <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                    </view>
+                </view>
+                <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+            </block>
+        </view>
+        <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+            <view class="icon iconfont icon-empty">
+            </view>
+            <text decode="true">
+              暂时还没有内容&emsp;
+            </text>
+        </view>
+    </view>
+  </view>
+  <!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />
+
+

@@ -21,8 +21,8 @@ page .wrap{
 .badge{
   margin-left:20rpx;
   background:#f44;
-  border-radius:18rpx;
-  padding:0 12rpx;
+  border-radius:25px;
+  padding:0 20rpx;
   color:#fff;
   font-size:24rpx;
 }
@@ -32,10 +32,10 @@ page .wrap{
 .bottom{
   background:#fff;
   padding:0 20rpx;
-  border-top:1px solid #ccc;
+  border-top:1px solid #DADADA;
 }
 .baseInfo>view{
-  border-bottom:1px solid #ccc;
+  border-bottom:1px solid #DADADA;
   display:flex;
   flex-direction:column;
   padding:30rpx;
@@ -48,7 +48,7 @@ page .wrap{
 .shareholderTitle{
   display:flex;
   color:#46c456;
-  border-bottom:1px solid #ccc;
+  border-bottom:1px solid #DADADA;
   padding:30rpx 0;
   align-items:center;
   font-weight:bold;
@@ -62,7 +62,7 @@ page .wrap{
   font-weight:normal;
 }
 .shareholderContent{
-  border-bottom:1px solid #ccc;
+  border-bottom:1px solid #DADADA;
    justify-content: flex-start;
    display:flex;
    flex-wrap:wrap;
@@ -72,9 +72,10 @@ page .wrap{
   width:46%;
   box-sizing:border-box;
   display:flex;
-  border-right:1px solid #ccc;
+  border-right:1px solid #DADADA;
   flex-direction: column;
   margin:4% 2%;
+  align-items: center;
 }
 .borderNoRight{
   border-right:none!important
@@ -84,12 +85,12 @@ page .wrap{
   margin-bottom:10rpx;
 }
 .mainMembers>view{
-  border-bottom:1px solid #ccc;
+  border-bottom:1px solid #d4d4d4;
   display:flex;
   align-items:center;
   padding:30rpx 0;
 }
-.mainMembers .icon-minshianjian{
+.mainMembers .icon-xingming{
   font-size:80rpx;
   margin-right:30rpx;
   
@@ -118,12 +119,13 @@ page .wrap{
   margin-left:20rpx;
 }
 .modifyRecord .content{
-  border:1px solid #ccc;
+  border:1px solid #d4d4d4;
   display:flex;
    padding:30rpx 0;
 }
 .modifyRecord .content>view{
- border-right:1px solid #ccc;
+ border-right:1px solid #d4d4d4;
+ flex-basis: 50%;
 }
 .modifyRecord>view{
   flex:1 0 50%;
@@ -141,7 +143,7 @@ page .wrap{
   margin-bottom:40rpx;
 }
 .affiliation view{
-  border-bottom:1px solid #ccc;
+  border-bottom:1px solid #d4d4d4;
   padding: 30rpx 0;
 }
 .arrowDown{
@@ -151,6 +153,7 @@ page .wrap{
 }
 .arrowUp{
   transition:transform 0.5s;
+   transform:rotate(-90deg);
 }
 .fadeIn{
   display:block;

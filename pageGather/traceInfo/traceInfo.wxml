@@ -1,0 +1,94 @@
+   <view class="top" wx:if="{{obj.objArray.length>1}}">
+        <view class="tab">
+           <view bindtap="changeTab" wx:for="{{obj.objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
+                <view>{{item.label}}</view>
+                <view>({{item.num}})</view>
+            </view>
+        </view>
+        <view class="totalInfo">
+            共搜索到<text>{{obj.totalNum}}</text>条信息
+        </view>
+   </view>
+  <view class="bottom {{obj.objArray.length==1?'noTab':''}}">
+    <view class="empty"></view>
+          <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{obj.objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
+            <block wx:if="{{item1.label=='溯源信息'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-zhuti_name="{{item2.zhuti_name}}"
+                    data-zhuti_address="{{item2.zhuti_address}}"
+                    data-zhuti_tel="{{item2.zhuti_tel}}"
+                    data-production_scale="{{item2.production_scale}}"
+                    data-leading_product="{{item2.leading_product}}"
+                    data-postcode="{{item2.postcode}}"
+                    data-zhuti_name="{{item2.zhuti_name}}"
+                    data-product_name="{{item2.product_name}}"
+                    data-product_logo="{{item2.product_logo}}"
+                    data-market_date="{{item2.market_date}}"
+                    data-production_unit="{{item2.production_unit}}"
+                    data-production_link="{{item2.production_link}}"
+                    data-production_charge_person="{{item2.production_charge_person}}"
+                    data-zhuisu_code="{{item2.zhuisu_code}}"
+                    data-distribution_unit="{{item2.distribution_unit}}"
+                    data-distribution_link="{{item2.distribution_link}}"
+                    data-distribution_charge_person="{{item2.distribution_charge_person}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content?item3.content:"--"}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{item1.label=='开具合格证'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-company_name="{{item2.company_name}}"
+                    data-business_license="{{item2.business_license}}"
+                    data-compartment="{{item2.compartment}}"
+                    data-contant="{{item2.contant}}"
+                    data-contant_number="{{item2.contant_number}}"
+                    data-company_address="{{item2.company_address}}"
+                    data-issue_date="{{item2.issue_date}}"
+                    data-certificates_number="{{item2.certificates_number}}"
+                    data-certificates_preview="{{item2.certificates_preview}}"
+                    data-product_name="{{item2.product_name}}"
+                    data-weight="{{item2.weight}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+                <view class="icon iconfont icon-empty">
+                </view>
+                <text decode="true">
+                暂时还没有内容&emsp;
+                </text>
+            </view>
+        </view>
+  </view>
+
+
+

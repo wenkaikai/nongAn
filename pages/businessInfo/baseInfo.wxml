@@ -1,14 +1,47 @@
 <template name="baseInfo">
   <view>
     <text>法定代表人</text>
-    <text>高振坤</text>
+    <text>{{baseInfo.operName}}</text>
   </view>
   <view>
     <text>成立日期</text>
-    <text>1997-06-06</text>
+    <text>{{baseInfo.termStart?baseInfo.termStart:"--"}}</text>
   </view>
   <view>
     <text>注册资本</text>
-    <text>156246464万亿人民币</text>
+    <text>{{baseInfo.registCapi?baseInfo.registCapi:"--"}}</text>
+  </view>
+  <view>
+    <text>公司类型</text>
+    <text>{{baseInfo.corporationType}}</text>
+  </view>
+  <view>
+    <text>英文名字</text>
+    <text>{{baseInfo.englishName?baseInfo.englishName:"--"}}</text>
+  </view>
+  <view>
+    <text>曾用名</text>
+    <text>{{baseInfo.old_name?baseInfo.old_name:"--"}}</text>
+  </view>
+
+  <view>
+    <text>地址</text>
+    <text>{{baseInfo.address?baseInfo.address:"--"}}</text>
+  </view>
+  <view>
+    <text>营业日期</text>
+    <text>{{baseInfo.termStart?baseInfo.termStart:"--"}}</text>
+  </view>
+  <view>
+        <text>核准日期</text>
+        <text>{{baseInfo.updatedDate?baseInfo.updatedDate:"--"}}</text>
+  </view>
+  <view>
+    <text>登记机关</text>
+    <text>{{baseInfo.belongOrg?baseInfo.belongOrg:"--"}}</text>
+  </view>
+  <view>
+    <text>经营范围</text>
+    <text>{{baseInfo.scope?baseInfo.scope:"--"}}</text>
   </view>
 </template>  

@@ -1,43 +1,43 @@
 <view class="bg-white showed">
   <view class="listItem">
     <view class="icon iconfont icon-lianxiren font-green"></view>
-    <view>联系人姓名</view>
+    <view>{{obj.operName}}</view>
   </view>
   <view class="listItem">
     <view class="icon iconfont icon-jieshao font-green"></view>
-    <view>农业企业</view>
+    <view>{{obj.corporationType?obj.corporationType:"暂无"}}</view>
   </view>
   <view class="listItem">
     <view class="icon iconfont icon-qiyeleixing font-green"></view>
-    <view>茶叶</view>
+    <view>{{obj.productionType?obj.productionType:"暂无"}}</view>
   </view>
   <view class="listItem">
     <view class="icon iconfont icon-chanliang font-green"></view>
-    <view>0.15吨</view>
+    <view>{{obj.output?obj.output:"暂无"}}</view>
   </view>
-  <view class="listItem">
+  <!-- <view class="listItem">
     <view class="icon iconfont icon-dayinji font-green"></view>
-    <view>已设定不显示</view>
-  </view>
+    <view>{{obj.printer?obj.printer:"暂无"}}</view>
+  </view> -->
   <view class="listItem">
     <view class="icon iconfont icon-wangzhi font-green"></view>
-    <view>http://www.vermicelli-sanjia.cn</view>
+    <view>{{obj.webSite?obj.webSite:"暂无"}}</view>
   </view>
   <view class="listItem">
     <view class="icon iconfont icon-dingwei font-green"></view>
-    <view>山东省招远市张星镇姜家村南</view>
+    <view>{{obj.site?obj.site:"暂无"}}</view>
   </view>
-  <view class="listItem">
+  <!-- <view class="listItem">
     <view class="icon iconfont icon-huowupinzhongweihu font-green"></view>
-    <view>生产销售淀粉及淀粉制品</view>
-  </view>
-  <view class="listItem" bindtap="toCorporation">
+    <view>{{obj.productionDescribe?obj.productionDescribe:"暂无"}}</view>
+  </view> -->
+  <view class="listItem" bindtap="{{obj.isTap?toCorporation:''}}">
     <view>
         <view class="icon iconfont icon-jikediancanicon35-copy font-green">
         </view>
-        <view>招远三佳粉丝蛋白有限公司地处胶东半岛，位于中国金都、素有“银丝之乡”没有的山东省招远市境内，距龙口港10公里，烟台港100公里，青岛港160公里，交通发达。年产优质龙口粉丝1100余吨，其中方…
+        <view> {{obj.corporationProfile?obj.corporationProfile:"暂无"}}
         </view>
     </view>
-     <view class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+     <view class="icon iconfont icon-iconfontyoujiantou-copy" wx:if="{{obj.isTap}}"></view>
   </view>
 </view>

@@ -1,5 +1,6 @@
 // pages/administrativeSupervision/administrativeSupervision.js
-const common = require("../../utils/util.js")
+const common = require("../../utils/util.js");
+const app = getApp();
 Page({
 
   /**
@@ -16,6 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      console.log(options)
     let id = options.id// 企业的id
     let subTitle = options.subTitle;// 点击的是哪一个子目录
     let corporation = options.corporation ? options.corporation : '农安信用';
@@ -25,61 +27,59 @@ Page({
     this.data.obj.column = subTitle;
     let newArray = []
     /**独立的个体 */
-    if (subTitle == "历史变更") {
-      newArray = [
-        {
-          label: "期限变更",
-          after:"问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果。",
-          before:"变化前问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果",
-          time:"2018-07-23"
-        },
-        {
-          label: "期限变更",
-          after: "问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果。",
-          before: "变化前问责不能泛化、滥用。问责是各级党组织的职责所在，一事当前，该不该问责、谁该被问责、怎样问责、问责到何种程度，关乎问责的作用和实际效果，关乎党组织的公信力。当前，个别地方、部门存在着执纪问责简单化现象，“一有错就问责，一问责就动纪”。如果问责简单粗暴，欠缺精准，甚至乱问责、错问责、问错责，就会削弱问责的严肃性和权威性，打击干部担当干事的积极性。问责是个精细活，“精准”是关键。能不能精准发现问题、精准识别问题、精准作出处置，关键在于各级党组织真正担负起主体责任，找准责任主体、把准问责重点，这样才能让党员干部知道自己身上的担子有多重，知道如何更好地约束管理自己，从而取得良好的政治效果、纪法效果、社会效果",
-          time: "2018-07-23"
-        }
-      ]
-    } 
-    else if (subTitle == "网站备案"){
-      newArray = [
-        {
-         title:"www.baidu.com",
-         websiteName:"北京同仁堂股份有限公司",
-         domain:"http://www.yuzhou.com",
-          time: "2018-07-23",
-          licence:"京ICP备15000393号-1"
-        },
-        {
-          title: "www.baidu.com",
-          websiteName: "北京同仁堂股份有限公司",
-          domain: "http://www.yuzhou.com",
-          time: "2018-07-23",
-          licence: "京ICP备15000393号-1"
-        }
-      ]
+   if (subTitle == "网站备案"){
+      newArray = []
+      common.ajax({
+          url: app.globalData.baseUrl +"/api/pc/get_website_list?company_name="+options.corporation,
+          type:"get"
+      }).then((res)=>{
+          if (res.resCode=="0000"){
+              newArray = res.data.Result;
+              this.data.obj.objArray = newArray;
+              this.setData({
+                  obj: this.data.obj
+              });
+          }else{
+              wx.showToast({
+                  icon:"none",
+                  text:"请求失败了"
+              })
+          }
+          
+      })
     }
     else if (subTitle == "地理位置") {
-      newArray = [
-        {
-          longitude: 116.549736,
-          latitude: 40.087849,
-          area:"北京市顺义区",
-          detailAddresss:"北京市顺义区安泰大街空港融慧园6号楼五层空港融慧园6号楼五层",
-          markers: [{
-            id: 1,
-            latitude: 40.087849,
-            longitude: 116.549736,
-            name: '空港融汇园'
-          }]
-        }
-      ]
-    }
-    this.data.obj.objArray = newArray
-    this.setData({
-      obj: this.data.obj
-    })
+       let address = wx.getStorageSync("address")
+           // 引入SDK核心类
+           var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
+           // 实例化API核心类
+           var demo = new QQMapWX({
+               key: '46GBZ-MRG3F-R2ZJ4-NLPMD-EUWUZ-TFFVU' // 必填
+           });
 
+           // 调用接口
+           let site = {};
+           let that = this;
+           demo.geocoder({
+               address: address,
+               success: function (res) {
+                   site = res.result.location;
+                   newArray = [{
+                       detailAddresss: address,
+                       latitude: site.lat,
+                       longitude: site.lng,
+                       markers:[{
+                           latitude: site.lat,
+                           longitude: site.lng, 
+                       }]
+                   }]
+                   that.data.obj.objArray = newArray;
+                   that.setData({
+                       obj: that.data.obj
+                   });
+               }
+           });
+    }
   },
 
   /**

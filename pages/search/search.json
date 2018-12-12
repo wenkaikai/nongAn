@@ -5,8 +5,8 @@
   "com-hotSearch": "../components/hotSearch/hotSearch",
   "com-searchResult":"../components/searchResult/searchResult"
 },
- "navigationBarBackgroundColor": "#ffffff",
-"navigationBarTextStyle": "black",
+ "navigationBarBackgroundColor": "#333",
+"navigationBarTextStyle": "#fff",
 "navigationBarTitleText": "综合搜索",
 "backgroundColor": "#eeeeee",
 "backgroundTextStyle": "light"

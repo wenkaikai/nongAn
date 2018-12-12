@@ -6,6 +6,12 @@ Component({
   properties: {
     subObj:{
       type:Object
+    },
+    creditCode:{
+        type:String
+    },
+    corporation:{
+        type:String
     }
   },
 
@@ -35,6 +41,8 @@ Component({
               Toast("该信息为非公开项,暂时无法查看,敬请谅解！")
               return false;
           }
+
+        
         wx.navigateTo({
           url: `${path}?id=${id}&corporation=${corporation}&subTitle=${subTitle}`
         })

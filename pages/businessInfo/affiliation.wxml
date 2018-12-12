@@ -1,4 +1,3 @@
 <template name="affiliation">
-  <view>航天工业曙光分支机构</view>
-  <view>航天工业曙光分支机构</view>
+  <view wx:for="{{branches}}" wx:key="index">{{item.Name}}</view>
 </template>

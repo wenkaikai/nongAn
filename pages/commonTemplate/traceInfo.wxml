@@ -2,7 +2,7 @@
 
 <template name="traceInfo">
   <view class="top">
-   <view class="subTitle">{{column}}</view>
+   <!-- <view class="subTitle">{{column}}</view> -->
     <view class="tab" >
       <view bindtap="changeTab" wx:for="{{objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
         <view>{{item.label}}</view>
@@ -16,68 +16,71 @@
   <view class="bottom">
     <view class="empty"></view>
     <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
-        <view class="contentList"  
+        <view class="contentList temp"  
           wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
           wx:if="{{item1.content.length>0}}"
           data-item-id="{{item2.itemId}}"
           data-info-url="{{item2.url}}"
           bindtap="toInfo"
           >
-            <block wx:if="{{item1.label=='溯源信息'}}">
-                <view>
-                    <view>产品名称 : {{item2.productName}}</view>
-                </view>
-                <view>
-                    <view>(上市)时间 : {{item2.marketTime}}</view>
-                </view>
-                <view>
-                    <view>联系方式 : {{item2.contact}}</view>
-                </view>
-                <view>
-                    <view>追溯码 : {{item2.traceNum}}</view>
-                </view>
-                <view>
-                    <view>浏览次数: {{item2.viewCount}} 次</view>
-                </view>
-                <view>
-                    <view>打印张数 : {{item2.printCount}} 张</view>
-                </view>
-                <view>
-                    <view>打印点Ip地址: {{item2.printAddressIp}}</view>
-                </view>
-            </block>
-            <block wx:elif="{{item1.label=='开具合格证'}}">
-                <view>
-                    <view>产品名称 : {{item2.productName}}</view>
-                    <view class="label success">{{item2.label}}</view>
-                </view>
-                <view>
-                    <view>规格 : {{item2.specification}}</view>
-                </view>
-                <view>
-                    <view>联系人 : {{item2.linkMan}}</view>
-                </view>
-                <view>
-                    <view>联系方式 : {{item2.contact}}</view>
-                </view>
-                <view>
-                    <view>开具日期: {{item2.issueTime}} 次</view>
-                </view>
-                <view>
-                    <view>合格证张数 : {{item2.certificateCount}} 张</view>
-                </view>
-                <block wx:if="{{item2.label=='自行开具'}}">
+            <view class="">
+                <block wx:if="{{item1.label=='溯源信息'}}">
                     <view>
-                        <view>无公害农产品应用量: {{item2.freeFoodCount}}</view>
+                        <view>产品名称 : {{item2.productName}}</view>
                     </view>
                     <view>
-                        <view>绿色食品应用量: {{item2.greenFoodCount}}</view>
+                        <view>(上市)时间 : {{item2.marketTime}}</view>
                     </view>
                     <view>
-                        <view>有机食品应用量: {{item2.organicFoodCount}}</view>
+                        <view>联系方式 : {{item2.contact}}</view>
+                    </view>
+                    <view>
+                        <view>追溯码 : {{item2.traceNum}}</view>
+                    </view>
+                    <view>
+                        <view>浏览次数: {{item2.viewCount}} 次</view>
+                    </view>
+                    <view>
+                        <view>打印张数 : {{item2.printCount}} 张</view>
+                    </view>
+                    <view>
+                        <view>打印点Ip地址: {{item2.printAddressIp}}</view>
                     </view>
                 </block>
-            </block>
+                <block wx:elif="{{item1.label=='开具合格证'}}">
+                    <view>
+                        <view>产品名称 : {{item2.productName}}</view>
+                        <view class="label success">{{item2.label}}</view>
+                    </view>
+                    <view>
+                        <view>规格 : {{item2.specification}}</view>
+                    </view>
+                    <view>
+                        <view>联系人 : {{item2.linkMan}}</view>
+                    </view>
+                    <view>
+                        <view>联系方式 : {{item2.contact}}</view>
+                    </view>
+                    <view>
+                        <view>开具日期: {{item2.issueTime}} 次</view>
+                    </view>
+                    <view>
+                        <view>合格证张数 : {{item2.certificateCount}} 张</view>
+                    </view>
+                    <block wx:if="{{item2.label=='自行开具'}}">
+                        <view>
+                            <view>无公害农产品应用量: {{item2.freeFoodCount}}</view>
+                        </view>
+                        <view>
+                            <view>绿色食品应用量: {{item2.greenFoodCount}}</view>
+                        </view>
+                        <view>
+                            <view>有机食品应用量: {{item2.organicFoodCount}}</view>
+                        </view>
+                    </block>
+                </block>
+            </view>
+            <view class="icon iconfont icon-iconfontyoujiantou-copy"></view>
         </view>
         <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
             <view class="icon iconfont icon-empty">

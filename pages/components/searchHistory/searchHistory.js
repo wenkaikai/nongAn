@@ -12,7 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    historyData:["历史记录一","历史记录二","历史记录三"]
+    historyData:[]
   },
   attached(){
      this.getRecords();

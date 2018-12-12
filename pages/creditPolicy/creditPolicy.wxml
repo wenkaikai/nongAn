@@ -1,80 +1,47 @@
   <view class="information">
         <view class="listWrap">
-            <view class="title">
-                <view class="titleContent">精选情报</view>
-            </view>
-            <view class="Listcontent">
-                <view>
-                    <view class="corporation">
-                        <view class="tag">企</view>
+            <block wx:for="{{obj}}" wx:key="index" wx:for-item="item1">
+                 <view class="item" wx:for="{{item1}}" wx:key="index">
+                    <view class="Listcontent" 
+                    bindtap="toInfo" 
+                        data-content="{{item.all_text}}"
+                        data-time = "{{item.publish_time}}"
+                        data-tag = "{{item.tag}}"
+                        data-source="{{item.book_source}}"
+                        data-title = "{{item.title_name}}"
+                    >
                         <view>
-                            <view class="name">农业科学院</view>
-                            <view class="time">09-03 16:50</view>
+                            <view class="corporation">
+                                <view class="tag" wx:if="{{item.tag}}">{{item.tag}}</view>
+                                <view>
+                                    <view class="name">{{item.book_source}} </view>
+                                    <view class="time">{{item.publish_time}}</view>
+                                </view>
+                            </view>
+                            <view class="article">
+                            <view class="articleTitle">{{item.title_name}}</view>
+                            <rich-text nodes="{{item.abstract}}"></rich-text>
+                            <view class="fullText">全文</view>
+                            </view>
                         </view>
                     </view>
-                    <view class="article">
-                        <view class="articleTitle">最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。</view>
-                        <view class="articleInfo">
-                            最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！
+                     <view class="addtion">
+                        <view class="viewCount">{{item.readCount}}次阅读</view>
+                        <view class="toolBar">
+                            <view bindtap="zan"
+                             data-id = "{{item.id}}"
+                             data-status = "{{item.like_status}}"
+                             >
+                                <text class="icon iconfont icon-dianzanquxiao {{item.like_status?'active':''}}"></text>
+                                <text>{{item.like_count}}</text>
+                            </view>
                         </view>
-                        <view class="fullText">全文</view>
                     </view>
                 </view>
-            </view>
-            <view class="addtion">
-                <view class="viewCount">172.6万阅读</view>
-                <view class="toolBar">
-                    <view>
-                        <text class="icon iconfont icon-dianzanquxiao zan"></text>
-                        <text>6</text>
-                    </view>
-                        <view>
-                        <view class="icon iconfont icon-pinglun"></view>
-                    </view>
-                        <view>
-                        <view class="icon iconfont icon-forward"></view>
-                    </view>
-                </view>
-            </view>
+            </block>
         </view>
-
-         <view class="listWrap">
-            <view class="title">
-                <view class="titleContent">精选情报</view>
-            </view>
-            <view class="Listcontent">
-                <view>
-                    <view class="corporation">
-                        <view class="tag">科</view>
-                        <view>
-                            <view class="name">农业科学院</view>
-                            <view class="time">09-03 16:50</view>
-                        </view>
-                    </view>
-                    <view class="article">
-                        <view class="articleTitle">最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。</view>
-                        <view class="articleInfo">
-                            最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！
-                        </view>
-                        <view class="fullText">全文</view>
-                    </view>
-                </view>
-            </view>
-            <view class="addtion">
-                <view class="viewCount">172.6万阅读</view>
-                <view class="toolBar">
-                    <view>
-                        <text class="icon iconfont icon-dianzanquxiao zan"></text>
-                        <text>6</text>
-                    </view>
-                        <view>
-                        <view class="icon iconfont icon-pinglun"></view>
-                    </view>
-                        <view>
-                        <view class="icon iconfont icon-forward"></view>
-                    </view>
-                </view>
-            </view>
-        </view>
-       
     </view>
+    <!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

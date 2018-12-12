@@ -1,16 +1,21 @@
-<view class="top">
-    <view class="num">109,953</view>
+<view class="top"  wx:if="{{totalCount}}">
+    <view class="num">{{totalCount}}</view>
     <view class="">全国录入农业主体总数</view>
 </view>
-<view class="bottom">
-    <view class="item">
+<view class="bottom"  wx:if="{{totalCount}}">
+    <view class="item"  wx:for="{{obj}}" wx:key="index">
         <view class="rank">
-            <text class="front">第一名</text>
-             浙江省
+            <text class="front" style="{{item.tag.length<3?'color:#4a4a4a':''}}">{{item.tag}}</text>
+             {{item.province}}
         </view>
         <view class="bar">
-            <view></view>
-            <view>40152</view>
+            <view style="width:{{item.scale*80<1?1:item.scale*80}}%"></view>
+            <view>{{item.count}}</view>
         </view>
     </view>
 </view>
+
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

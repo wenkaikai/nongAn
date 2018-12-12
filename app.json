@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/search/search",
         "pages/index/index",
+        "pages/search/search",
         "pages/logs/logs",
         "pages/enterprise/enterprise",
         "pages/reademe/reademe",
@@ -19,7 +19,26 @@
         "pages/creditPolicy/creditPolicy",
         "pages/nearbyCorporation/nearbyCorporation",
         "pages/corporationInfo/corporationInfo",
-        "pages/intelligenceInfo/intelligenceInfo"
+        "pages/intelligenceInfo/intelligenceInfo",
+        "pageGather/doublePublic/doublePublic",
+        "pageGather/qualityInspection/qualityInspection",
+        "pageGather/mediaEvaluation/mediaEvaluation",
+        "pageGather/associationInfo/associationInfo",
+        "pageGather/patent/patent",
+        "pageGather/brandInfo/brandInfo",
+        "pageGather/customEvaluation/customEvaluation",
+        "pageGather/courtAnnouncement/courtAnnouncement",
+        "pageGather/loseCreditInfo/loseCreditInfo",
+        "pageGather/historyChange/historyChange",
+        "pageGather/courtJudge/courtJudge",
+        "pages/courtJudgeInfo/courtJudgeInfo",
+        "pageGather/redBlackRank/redBlackRank",
+        "pageGather/subjectedExecution/subjectedExecution",
+        "pageGather/supervisionInspection/supervisionInspection",
+        "pageGather/authInfo/authInfo",
+        "pageGather/traceInfo/traceInfo",
+        "pageGather/copyright/copyright",
+        "pageGather/staffEvalation/staffEvalation"
     ],
     "window": {
         "navigationBarTitleText": "农安信用",

@@ -5,3 +5,19 @@
 .com-show{
     display:block;
 }
+page{
+    background:#F2F2F2;
+}
+.empty{
+    color:#ccc;
+    text-align: center;
+    background:#F2F2F2;
+    margin-top:250rpx;
+
+}
+.empty .icon{
+  font-size:180rpx;
+  height:180rpx;
+  line-height: 180rpx;
+  margin:100rpx 0 15rpx 0;
+}

@@ -1,18 +1,9 @@
 <template name="mainMembers">
- 
-    <view>
-        <view class="icon iconfont icon-minshianjian"></view>
+    <view wx:for="{{employees}}" wx:key="index">
+        <view class="icon iconfont icon-xingming"></view>
         <view class="content">
-          <text>满杰</text>
-          <text>懂事</text>
+          <text>{{item.Name}}</text>
+          <text>{{item.Job?item.Job:"--"}}</text>
         </view>
     </view>
-     <view>
-        <view class="icon iconfont icon-minshianjian"></view>
-        <view class="content">
-          <text>满杰</text>
-          <text>懂事</text>
-        </view>
-    </view>
-
 </template>

@@ -1,25 +1,25 @@
 <template name="shareholder">
-  <view>
+  <view wx:for="{{shareholder}}" wx:key="index" wx:for-item="item">
    <view class="shareholderTitle">
-    <view class="name">天津高林华创科技有限公司</view>
-    <view class="label">大股东</view>
+    <view class="name">{{item.StockName}}</view>
+    <view class="label" wx:if="{{item.LargePartner}}">{{item.LargePartner}}</view>
    </view>
    <view class="shareholderContent">
     <view>
       <text>持股比例</text>
-      <text>41%</text>
+      <text>{{item.CapiRate}}</text>
     </view>
     <view class="borderNoRight">
       <text>股东类型</text>
-      <text>自然人股东</text>
+      <text>{{item.StockType}}</text>
     </view>
     <view>
       <text>认缴出资额</text>
-      <text>4520</text>
+      <text>{{item.ShouldCapi}}万元</text>
     </view>
      <view class="borderNoRight">
       <text>实出资额</text>
-      <text>4200</text>
+      <text>{{item.RealCapi?item.RealCapi+'万元':'暂无'}}</text>
     </view>
    </view>
   </view>

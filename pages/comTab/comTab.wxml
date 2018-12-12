@@ -57,8 +57,19 @@
   <template is="judiciaryInfoBetween" data="{{...obj}}"></template>
 </view>
 
-<view wx:elif="{{obj.column=='员工评价'}}">
+
+
+
+
+<view 
+wx:elif="{{obj.column=='员工评价'||obj.column=='行政监管'}}"
+>
   <template is="finallyCommonTemplate" data="{{...obj}}"></template>
 </view>
+
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />
 
 

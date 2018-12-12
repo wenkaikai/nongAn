@@ -1,0 +1,23 @@
+  <view class="bottom modifyRecord wrap">
+    <view wx:for="{{changeRecords}}" wx:key="index">
+        <view class="time">
+        <view class="dot"></view>
+        <view>{{item.ChangeDate}}</view>
+        </view>
+        <view class="modifyScope">{{item.ProjectName}}</view>
+        <view class="content">
+        <view class="before">
+            <view class="modifyTitle">变更前</view>
+            <view class="main">{{item.BeforeContent}}</view>
+        </view>
+        <view class="after borderNoRight">
+            <view class="modifyTitle">变更后</view>
+            <view class="main ">{{item.AfterContent}}</view>
+        </view>
+        </view>
+    </view>
+  </view>
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

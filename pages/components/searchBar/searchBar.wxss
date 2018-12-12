@@ -27,3 +27,4 @@
   color:#ADADAD;
   flex-shrink: 0;
 }
+.icon-shanchu1{color:#ccc;}

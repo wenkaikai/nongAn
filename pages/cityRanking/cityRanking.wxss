@@ -6,7 +6,7 @@ page{
 
 .top{
     background:#fff;
-    margin-bottom:30rpx;
+    margin-bottom:20rpx;
     padding:40rpx;
 }
 .num{

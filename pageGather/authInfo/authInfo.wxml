@@ -1,0 +1,135 @@
+   <view class="top" wx:if="{{obj.objArray.length>1}}">
+        <view class="tab">
+           <view bindtap="changeTab" wx:for="{{obj.objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
+                <view>{{item.label}}</view>
+                <view>({{item.num}})</view>
+            </view>
+        </view>
+        <view class="totalInfo">
+            共搜索到<text>{{obj.totalNum}}</text>条信息
+        </view>
+   </view>
+  <view class="bottom {{obj.objArray.length==1?'noTab':''}}">
+    <view class="empty"></view>
+          <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{obj.objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
+            <block wx:if="{{item1.label=='无公害产品'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-annual_turnover="{{item2.annual_turnover}}"
+                    data-process_scale="{{item2.process_scale}}"
+                    data-product_type="{{item2.product_type}}"
+                    data-license_number="{{item2.license_number}}"
+                    data-annual_output="{{item2.annual_output}}"
+                    data-license_time="{{item2.license_time}}"
+                    data-company_type="{{item2.company_type}}"
+                    data-firm_name="{{item2.firm_name}}"
+                    data-proposer="{{item2.proposer}}"
+                    data-origin_address="{{item2.origin_address}}"
+                    data-compartment="{{item2.compartment}}"
+                    data-origin_number="{{item2.origin_number}}"
+                    data-product_name="{{item2.product_name}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{item1.label=='绿色食品'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-company_name="{{item2.company_name}}"
+                    data-product_name="{{item2.product_name}}"
+                    data-brand_name="{{item2.brand_name}}"
+                    data-license_number="{{item2.license_number}}"
+                    data-license_time="{{item2.license_time}}"
+                    data-business_type="{{item2.business_type}}"
+                    data-enterprise_code="{{item2.enterprise_code}}"
+                    data-compartment="{{item2.compartment}}"
+                    data-agricultural_cooperative="{{item2.agricultural_cooperative}}"
+                    data-army="{{item2.army}}"
+                    data-bibcock_logo="{{item2.bibcock_logo}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{item1.label=='地理标志产品'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-product_name="{{item2.product_name}}"
+                    data-register_time="{{item2.register_time}}"
+                    data-register_number="{{item2.register_number}}"
+                    data-company_name="{{item2.company_name}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+             <block wx:if="{{item1.label=='有机产品'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-product_name="{{item2.product_name}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+                <view class="icon iconfont icon-empty">
+                </view>
+                <text decode="true">
+                暂时还没有内容&emsp;
+                </text>
+            </view>
+        </view>
+  </view>
+
+
+

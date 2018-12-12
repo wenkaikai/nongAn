@@ -1,0 +1,110 @@
+   <view class="top" wx:if="{{obj.objArray.length>1}}">
+        <view class="tab">
+           <view bindtap="changeTab" wx:for="{{obj.objArray}}" wx:key="index" data-id="{{index}}" class="{{item.isShow ? 'active' :'leave'}}">
+                <view>{{item.label}}</view>
+                <view>({{item.num}})</view>
+            </view>
+        </view>
+        <view class="totalInfo">
+            共搜索到<text>{{obj.totalNum}}</text>条信息
+        </view>
+   </view>
+  <view class="bottom {{obj.objArray.length==1?'noTab':''}}">
+    <view class="empty"></view>
+          <view class="content {{item1.isShow ? 'fadeIn':'fadeOut'}}" wx:for="{{obj.objArray}}" hidden="{{!item1.isShow}}" wx:key="index" wx:for-item="item1">
+            <block wx:if="{{item1.label=='执法日志'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-scene_photo="{{item2.scene_photo}}"
+                    data-law_enforcement_person="{{item2.law_enforcement_person}}"
+                    data-law_time="{{item2.law_time}}"
+                    data-check_situation="{{item2.check_situation}}"
+                    data-enforcement="{{item2.law_enforcement}}"
+                    data-is_scan="{{item2.is_scan}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{item1.label=='巡查日志'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-patrol_time="{{item2.patrol_time}}"
+                    data-patrol_enforcement_person="{{item2.patrol_enforcement_person}}"
+                    data-check_situation="{{item2.check_situation}}"
+                    data-scene_photo="{{item2.scene_photo}}"
+                    data-patrol_enforcement="{{item2.patrol_enforcement}}"
+                    data-is_scan="{{item2.is_scan}}"
+                    data-log_type="{{item2.log_type}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{item1.label=='案件登记'}}">
+                <view class="finallyList"  
+                    wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
+                    wx:if="{{item1.content.length>0}}"
+                    data-item-id="{{item2.itemId}}"
+                    data-sub-title="{{item2.subTitle}}"
+                    data-law_enforcement_person="{{item2.law_enforcement_person}}"
+                    data-law_enforcement="{{item2.law_enforcement}}"
+                    data-is_scan="{{item2.is_scan}}"
+                    data-start_case_time="{{item2.start_case_time}}"
+                    data-end_case_time="{{item2.end_case_time}}"
+                    data-judgment_basis="{{item2.judgment_basis}}"
+                    data-penalty="{{item2.penalty}}"
+                    data-case_number="{{item2.case_number}}"
+                    data-case_name="{{item2.case_name}}"
+                    data-illegal_fact="{{item2.illegal_fact}}"
+                    data-case_money="{{item2.case_money}}"
+                    bindtap="toInfo"
+                    >
+                    <block>
+                        <view class="contentLeft">
+                            <view class="{{!item3.title?'itemTitle':''}}" wx:for="{{item2.listContent}}" wx:key="index" wx:for-item="item3">
+                                <view wx:if="{{item3.title}}">{{item3.title}}：</view>
+                                <view >{{item3.content}}</view>
+                                <view wx:if="{{item3.label}}" class="label {{item3.className}}">{{item3.label}}</view>
+                            </view>
+                        </view>
+                        <view hidden="{{!item2.isTap}}" class="icon iconfont icon-iconfontyoujiantou-copy"></view>
+                    </block>
+                </view>
+            </block>
+            <view wx:if="{{item1.content.length==0}}" class="listEmpty" >
+                <view class="icon iconfont icon-empty">
+                </view>
+                <text decode="true">
+                暂时还没有内容&emsp;
+                </text>
+            </view>
+        </view>
+  </view>
+
+
+

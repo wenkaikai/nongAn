@@ -1,23 +1,29 @@
 <view>
-    <view class="item" wx:for="{{obj}}" wx:key="index">
-        <view class="title">{{item.corporation}}</view>
-        <view class="content">
-            <view>
-                <view class="font-gray">注册时间</view>
-                <view>{{item.content.time}}</view>
+    <block wx:for="{{obj}}" wx:key="index" wx:for-item="item1">
+        <view class="item" wx:for="{{item1}}" wx:key="index" data-name="{{item.zhuti_name}}" bindtap="toInfo">
+            <view class="title">{{item.zhuti_name}}</view>
+            <view class="content">
+                <view>
+                    <view class="font-gray">注册时间</view>
+                    <view>{{item.StartDate}}</view>
+                </view>
+                <view>
+                    <view class="font-gray">注册资金</view>
+                    <view>{{item.RegistCapi?item.RegistCapi:'暂无'}}</view>
+                </view>
+                <view>
+                    <view  class="font-gray">法人代表</view>
+                    <view>{{item.OperName}}</view>
+                </view>
             </view>
-            <view>
-                <view class="font-gray">注册资金</view>
-                <view>{{item.content.registeredCapital}}万元</view>
-            </view>
-            <view>
-                <view  class="font-gray">法人代表</view>
-                <view>{{item.content.legalPerson}}</view>
+            <view class="bottom">
+                <view class="icon iconfont icon-renzheng1"></view>
+                <view>信用分值:{{item.score}}分</view>
             </view>
         </view>
-        <view class="bottom">
-            <view class="icon iconfont icon-renzheng1"></view>
-            <view>信用分值:{{item.content.creditScore}}分</view>
-        </view>
-    </view>
+    </block>
 </view>
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />

@@ -6,31 +6,32 @@
   margin-top:10rpx;
 }
 .list{
-  padding-left:10rpx;
   display:flex;
   justify-content: space-between;
   align-items:center;
-}
-.list{
   border-bottom:1px solid #F5F5F5;
   padding:30rpx;
   font-weight: normal;
   font-size:28rpx;
+   padding-left:0rpx;
 }
 .list .center{
   flex-grow:1;
   color:#333;
+  height:40rpx;
+  line-height:40rpx;
 }
 .list .left{
   padding:0 20rpx 0 10rpx ;
   flex-shrink:0;
   color:#CFCFCF;
+  font-size:40rpx;
 }
 .list .right{
   padding:0 40rpx 0 40rpx ;
   flex-shrink:0;
-   color:#CFCFCF;
-   font-size:inherit;
+  color:#CFCFCF;
+  font-size:32rpx;
 }
 .all{
   text-align: center;
@@ -38,4 +39,5 @@
    padding:30rpx;
    font-weight: normal;
   font-size:28rpx;
+  margin-left:-50rpx;
 }

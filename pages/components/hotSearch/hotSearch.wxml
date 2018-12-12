@@ -6,6 +6,10 @@
     <view class="line"></view>
   </view>
   <view class="hotSearch">
-    <view wx:for="{{hotData}}" wx:key="index" wx:for-item = "item" bindtap="toSearchList" data-content="{{item}}">{{item}}</view>
+    <view wx:for="{{hotData}}" wx:key="index" wx:for-item = "item" data-content="{{item}}">
+        <navigator url="/pages/enterprise/enterprise?corporation={{item.company_full_name}}">
+            {{item.company_short_name}}
+        </navigator>
+    </view>
   </view>
 </view>

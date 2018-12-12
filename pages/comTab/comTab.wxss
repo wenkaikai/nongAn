@@ -2,13 +2,13 @@
 
 @import "/libs/icon/iconfont.wxss";
 page{
-  background:#f8f8f8;
+  background:#f2f2f2;
 }
 .top{
   position:fixed;
   background:#fff;
   width:100%;
-  height:200rpx;
+  height:180rpx;
   font-size:28rpx;
   color:#4a4a4a;
 }
@@ -22,7 +22,7 @@ page{
 .tab{
   display:flex;
   align-items:center;
-  background:#f8f8f8;
+  background:#f2f2f2;
 
 }
 .tab>view{
@@ -99,6 +99,9 @@ page{
   border:1px solid #ccc;
   font-size:24rpx;
   border-radius:5rpx;
+  white-space: nowrap;
+  height:40rpx;
+  line-height:40rpx;
 }
 .fadeIn{
   opacity: 1;
@@ -164,4 +167,22 @@ page{
 }
 .itemTitle>view:first-child{
     font-weight:bold;
+}
+.label{white-space: nowrap}
+
+/* yaoshanchu */
+.temp{
+    flex-direction:row;
+    justify-content: space-between;
+}
+.temp>view:first-child{
+    flex-direction: column;
+    align-items:flex-start;
+}
+.temp>view:first-child>view{
+    margin:5rpx;
+    display:flex;
+}
+.label{
+    margin-left:20rpx;
 }

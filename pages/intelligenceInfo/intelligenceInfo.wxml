@@ -1,2 +1,36 @@
-<!--pages/intelligenceInfo/intelligenceInfo.wxml-->
-<text>pages/intelligenceInfo/intelligenceInfo.wxml</text>
+  <view class="information">
+        <view class="listWrap">
+            <view class="item">
+                <view class="Listcontent">
+                    <view>
+                        <view class="corporation">
+                            <view class="tag" wx:if="{{obj.tag}}">{{obj.tag}}</view>
+                            <view>
+                                <view class="name">{{obj.source}}</view>
+                                <view class="time">{{obj.time}}</view>
+                            </view>
+                        </view>
+                        <view class="article">
+                            <view class="articleTitle">{{obj.title}}</view>
+                            <rich-text nodes="{{obj.content}}"></rich-text>
+                        </view>
+                    </view>
+                </view>
+                <!-- <view class="addtion">
+                    <view class="viewCount">172.6万阅读</view>
+                    <view class="toolBar">
+                        <view>
+                            <text class="icon iconfont icon-dianzanquxiao zan"></text>
+                            <text>6</text>
+                        </view>
+                            <view>
+                            <view class="icon iconfont icon-pinglun"></view>
+                        </view>
+                            <view>
+                            <view class="icon iconfont icon-forward"></view>
+                        </view>
+                    </view>
+                </view> -->
+            </view>
+        </view>
+ </view>

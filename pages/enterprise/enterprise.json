@@ -6,9 +6,9 @@
     "com-innerControlInfo": "../components/innerControlInfo/innerControlInfo",
     "com-baseInfoDetails":"../components/baseInfoDetails/baseInfoDetails"
   },
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "综合搜索",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "信用档案",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"
 }

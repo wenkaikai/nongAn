@@ -1,11 +1,11 @@
 <template name="websiteRecords">
 
   <view wx:if="{{objArray.length>0}}" wx:for="{{objArray}}" class="lists" wx:key="index">
-    <view class="title">{{item.title}}</view>
-    <view class="">{{item.websiteName}}</view>
-    <view class="">{{item.domain}}</view>
-    <view class="">{{item.time}}</view>
-    <view class="">{{item.licence}}</view>
+    <view class="title">{{item.HomeSite}}</view>
+    <view class="">网站名称：{{item.CompanyName}}</view>
+    <view class="">域名：{{item.YuMing}}</view>
+    <view class="">审核通过时间：{{item.SDate}}</view>
+    <view class="">备案许可证：{{item.BeiAn}}</view>
   </view>
   <view wx:if="{{objArray.length==0}}" class="listEmpty" >
     <view class="icon iconfont icon-empty"></view>

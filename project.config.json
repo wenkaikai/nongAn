@@ -1,0 +1,59 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx102c368d1c6f4c16",
+	"projectname": "nongAn",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "development",
+					"pathName": "pages/index/index",
+					"query": "corporation=张掖嘉禾农产品市场开发有限公司&id=331021NA000864X&subTitle=监督检查"
+				},
+				{
+					"id": 1,
+					"name": "reademe",
+					"pathName": "pages/reademe/reademe",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "enterprise",
+					"pathName": "pages/enterprise/enterprise",
+					"query": "corporation=云南白药置业有限公司"
+				}
+			]
+		}
+	}
+}

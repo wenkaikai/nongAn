@@ -18,7 +18,14 @@
           wx:for="{{item1.content}}" wx:for-item="item2" wx:key="index"
           wx:if="{{item1.content.length>0}}"
           data-item-id="{{item2.itemId}}"
-          data-info-url="{{item2.url}}"
+          data-file_content="{{item2.file_content}}"
+          data-file_no="{{item2.file_no}}"
+          data-file_number="{{item2.file_number}}"
+          data-file_property="{{item2.file_property}}"
+          data-issuer="{{item2.issuer}}"
+          data-pubdate="{{item2.pubdate}}"
+          data-sub-title="{{item2.subTitle}}"
+          data-title="{{item2.title}}"
           bindtap="toInfo"
           >
             <block>

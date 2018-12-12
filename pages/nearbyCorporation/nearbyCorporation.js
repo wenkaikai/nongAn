@@ -1,4 +1,5 @@
-// pages/creditOptimization/creditOptimization.js
+const common = require("../../utils/util.js");
+const app = getApp();
 Page({
 
     /**
@@ -6,41 +7,26 @@ Page({
      */
     data: {
         obj: [
-            {
-                corporation: "杭州新洲生态农业开发有限公司",
-                content: {
-                    time: "1992-11-19",
-                    registeredCapital: "351.26",
-                    legalPerson: "何厚雄",
-                    creditScore: "98"
-                }
-            },
-            {
-                corporation: "杭州新洲生态农业开发有限公司",
-                content: {
-                    time: "1992-11-19",
-                    registeredCapital: "351.26",
-                    legalPerson: "何厚雄",
-                    creditScore: "98"
-                }
-            },
-            {
-                corporation: "杭州新洲生态农业开发有限公司",
-                content: {
-                    time: "1992-11-19",
-                    registeredCapital: "351.26",
-                    legalPerson: "何厚雄",
-                    creditScore: "98"
-                }
-            }
-        ]
+
+        ],
+        pagesize: 20,
+        page: 1
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        wx.setNavigationBarTitle({
+            title: "附近主体"
+        })
+        common.ajax({
+            url: app.globalData.baseUrl + "/api/pc/get_near_main_body",
+        }).then(res => {
+            this.setData({
+                "obj[0]":res.data,
+            });
+        })
     },
 
     /**
@@ -82,7 +68,24 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
+        let page = this.data.page;
+        page++;
+        common.ajax({
+            url: app.globalData.baseUrl + "/api/pc/get_near_main_body",
+        }).then(res => {
+            if (res.status == 2) {
 
+                wx.showToast({
+                    icon: "none",
+                    title: "没有更多了"
+                })
+                return false;
+            }
+            this.setData({
+                ["obj[" + this.data.page + "]"]: res.data,
+                page: page
+            });
+        })
     },
 
     /**
@@ -90,5 +93,11 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    toInfo(e) {
+        console.log(e)
+        wx.navigateTo({
+            url: "/pages/enterprise/enterprise?corporation=" + e.currentTarget.dataset.name
+        })
     }
 })

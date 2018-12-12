@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    hotData: ["不限", "农夫山泉", "书架", "不限", "农夫山泉", "书架", "不限", "农夫山泉", "书架", "不限", "农夫山泉", "书架"]
+      hotData: []
   },
 
   /**
@@ -21,6 +21,17 @@ Component({
       toSearchList(e) {
           this.triggerEvent("change", { param: e.target.dataset.content })
       }
+  },
+  attached(){
+      wx.getStorage({
+          key: 'hotSearch',
+          success: (res)=> {
+              console.log(res)
+              this.setData({
+                  hotData:res.data 
+              })
+          },
+      })
   },
   externalClasses: ['showed']
 })

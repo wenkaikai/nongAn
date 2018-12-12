@@ -1,14 +1,16 @@
-<import src="../commonTemplate/historyModify.wxml"/>
 <import src="../commonTemplate/websiteRecords.wxml"/>
 <!-- location 地理位置 -->
 <import src="../commonTemplate/location.wxml"/>
 <view class="subTitle">{{obj.column}}</view>
-<view wx:if="{{obj.column=='历史变更'}}" class="modifyRecord common">
-    <template is="historyModify" data="{{...obj}}"></template>
-</view>
-<view wx:elif="{{obj.column=='网站备案'}}" class="websiteRecords common">
+<view wx:if="{{obj.column=='网站备案'}}" class="websiteRecords common">
     <template is="websiteRecords" data="{{...obj}}"></template>
 </view>
 <view wx:elif="{{obj.column=='地理位置'}}" class="location common">
     <template is="location" data="{{...(obj.objArray[0])}}"></template>
 </view>
+
+<!-- toast 提示 -->
+<van-toast id="van-toast" />
+<!-- notify 提示 -->
+<van-notify id="van-notify" />
+

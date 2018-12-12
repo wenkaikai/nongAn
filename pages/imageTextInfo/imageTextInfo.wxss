@@ -19,7 +19,7 @@ page{
   background:#fff;
   padding:0 20rpx 30rpx 20rpx;
 }
-.bottom view{
+.bottom>view{
   display:flex;
   justify-content: space-between;
   color:#4a4a4a;
@@ -28,17 +28,17 @@ page{
   border-bottom:1px solid #ccc;
   font-size:28rpx;
 }
-.bottom view:last-of-type{
+.bottom > view:last-of-type{
   border-bottom:none;
 }
-.bottom view.title{
+.bottom > view.title{
  justify-content: center;
  font-size:32rpx;
 }
-.bottom view text:first-child{
+.bottom > view text:first-child{
   white-space: nowrap;
   margin-right:20rpx;
 }
-.bottom view text:last-child{
+.bottom > view text:last-child{
   color:#9B9B9B;
 }

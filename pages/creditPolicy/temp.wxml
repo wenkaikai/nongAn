@@ -1,0 +1,35 @@
+  <view class="information">
+        <view class="listWrap">
+            <view class="item">
+                <view class="Listcontent" bindtap="toInfo">
+                    <view>
+                        <view class="corporation">
+                            <view class="tag">企</view>
+                            <view>
+                                <view class="name">农业科学院</view>
+                                <view class="time">09-03 16:50</view>
+                            </view>
+                        </view>
+                        <view class="article">
+                            <view class="articleTitle">最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。</view>
+                            <view class="articleInfo">
+                                最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！联合创新实验室腿痛快检技术的成果孵化与应用推广。最新消息！
+                            </view>
+                            <view class="fullText">全文</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="addtion">
+                    <view class="viewCount">172.6万阅读</view>
+                    <view class="toolBar">
+                        <view>
+                            <text class="icon iconfont icon-dianzanquxiao zan"></text>
+                            <text>6</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+           
+        </view>
+    </view>

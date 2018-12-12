@@ -1,1 +1,99 @@
-/* pages/intelligenceInfo/intelligenceInfo.wxss */
+
+.information{
+    margin-bottom:40rpx;
+}
+.information .title{
+    border-bottom:1px solid #D3D3D3;
+    font-weight: bold;
+    padding:20rpx 30rpx;
+    display:flex;
+    align-items:center;
+}
+.titleContent {
+    font-size:32rpx;
+    line-height:1;
+    margin-left:20rpx;
+}
+.Listcontent{
+    padding:20rpx 30rpx 0 30rpx;
+    font-size:28rpx;
+}
+.corporation{
+    display:flex;
+    margin-bottom:20rpx;
+}
+.corporation .tag{
+    height:80rpx;
+    width:80rpx;
+    background:#F5A623;
+    border-radius:50%;
+    margin-right:20rpx;
+    color:#fff;
+    line-height: 80rpx;
+    text-align: center;
+}
+.articleTitle{
+    font-weight: bold;
+    margin-bottom:20rpx;
+}
+.articleInfo{
+
+}
+.fullText{
+    color:#117AFF;
+    border-bottom:1px solid #F4F4F4;
+    padding:20rpx 0;
+}
+.time{
+    font-size:24rpx;
+    color:#9b9b9b;
+}
+
+.addtion{
+    padding:12rpx 30rpx;
+    display:flex;
+    justify-content: space-between;
+    color:#989898;
+    align-items:center;
+    border-top:0;
+}
+.toolBar{
+    flex-basis: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.toolBar>view{
+    margin-left:20rpx;
+}
+.zan{
+    margin-right:10rpx;
+}
+.icon-youxuan{
+    color:#1CA0F6;
+    font-size:70rpx;
+}
+.icon-zhengce{
+     color:#F5A623;
+    font-size:70rpx;
+}
+.icon-paihang1{
+    color:#1CA0F6;
+    font-size:70rpx;
+}
+.icon-dingwei{
+   color:#46C456;
+    font-size:70rpx; 
+}
+.verticalBar{
+    background:#0166B6;
+    width:6rpx;
+    height:30rpx;
+    border-radius:3px;
+}
+.item{
+    border-top:20rpx solid #F4F4F4;
+}
+.listWrap>view:nth-child(1){
+    border:none;
+}

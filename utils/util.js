@@ -26,7 +26,7 @@ const ajax = (obj)=>{
       });
     }
     wx.request({
-      url: app.globalData.baseUrl+obj.url, 
+      url:obj.url, 
       data: obj.data ? obj.data : "",
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 会将数据转换成 query 

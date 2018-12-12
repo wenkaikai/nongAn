@@ -11,9 +11,8 @@
 .image image{width:100%;height:200rpx;}
 .content{
   width:70%;
-}
-.content{
-  width:70%;
+  padding-left:20rpx;
+  box-sizing:border-box;
 }
 .content view{
   width:100%;
@@ -26,4 +25,15 @@
 .content .certificateCategory{
   font-size:32rpx;
   margin-bottom:10rpx;
+}
+.listEmpty{
+ 
+  color:#ccc;
+  text-align: center;
+}
+.listEmpty view:first-child{
+  font-size:180rpx;
+  height:180rpx;
+  line-height: 180rpx;
+  margin:100rpx 0 15rpx 0;
 }

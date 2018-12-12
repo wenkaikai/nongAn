@@ -1,9 +1,9 @@
 <view class="wrap showed">
 <scroll-view scroll-y wx:if="{{historyData.length>0}}" style="{{historyData.length>5?'height:200px':''}}">
     <view wx:for="{{historyData}}" wx:key = "index" class="list">
-      <view class="icon iconfont icon-jilu left" ></view>
+      <view class="icon iconfont icon-lishijilu1 left" ></view>
       <view class="center" bindtap="toSearchList" data-content="{{item}}">{{item}}</view>
-     <view class="icon iconfont icon-chushaixuanxiang right" bindtap="deleteSingle" data-index="{{index}}"></view>
+     <view class="icon iconfont icon-shanchu right" bindtap="deleteSingle" data-index="{{index}}"></view>
    </view>
 </scroll-view>
    

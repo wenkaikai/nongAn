@@ -12,80 +12,166 @@ Page({
    * 生命周期函数--监听页面加载
    */
     onLoad: function (options) {
-        let corporationId = options.id;// 公司的id
-        let litemId = options.itemId; // 是哪一条的id
+        console.log(options)
         let subTitle = options.subTitle;// 子标题
-        let corporation = options.corporation;// 公司的名字
-        let infoUrl = options.infoUrl;// 如果需要请求就要请求地址
-        let listTitle = options.listTitle?options.listTitle:"";//如果有listTitle
+        let listTitle = options.title ? options.title:"";//如果有listTitle
         wx.setNavigationBarTitle({
             title: subTitle
         })
-        let content = [
-            {
-                title: "档案编号",
-                content: "ZZ-748-5059-8342"
-            },
-            {
-                title: "档案文号",
-                content: "ZZ-748-5059-8342"
-            },
-            {
-                title: "档案性质",
-                content: "良好"
-            },
-            {
-                title: "发布单位",
-                content: "内蒙古n农牧业产业化龙头企业协会"
-            },
-            {
-                title: "发布时间",
-                content: "2012-12-45"
-            },
-            {
-                title: "证书内容",
-                content: "经过审核，该单位符合开户条件，准予开立基本存款账户"
+        let content=[];
+        
+        if (options.img_url){
+            if (options.img_url=="None"){
+                options.img_url = "/libs/img/noImg.png"
             }
-        ]
-        let imgUrl = {
-            url1:"http://docs.ebdoor.com/Image/CompanyCertificate/22/226523.jpg"
+        }else{
+            options.img_url = "/libs/img/noImg.png"
         }
-        if (subTitle == '协会信息') {
-            
-        } else if (subTitle == "专利" || subTitle == "商标" || subTitle == "著作权"){
+        let imgUrl = {
+            url1: options.img_url
+        }
+        if (subTitle == '专利') {
             content = [
                 {
                     title: "档案编号",
-                    content: "ZZ-748-5059-8342"
+                    content: options.file_number
                 },
                 {
                     title: "档案文号",
-                    content: "ZZ-748-5059-8342"
+                    content: options.file_no
                 },
                 {
-                    title: "档案性质",
-                    content: "良好"
+                    title: "专利权人",
+                    content: options.patent_holder
                 },
                 {
-                    title: "发布单位",
-                    content: "内蒙古n农牧业产业化龙头企业协会"
+                    title: "档案分类",
+                    content: options.file_type
                 },
                 {
                     title: "发布时间",
-                    content: "2012-12-45"
+                    content: options.pubdate
                 },
                 {
                     title: "档案内容",
-                    content: "专利商标著作权经过审核，该单位符合开户条件，准予开立基本存款账户"
+                    content: options.file_info 
+                }
+            ]
+
+        } 
+        else if (subTitle == '商标'){
+            content = [
+                {
+                    title: "档案编号",
+                    content: options.file_number
+                },
+                {
+                    title: "档案文号",
+                    content: options.file_no
+                },
+                {
+                    title: "商标申请人",
+                    content: options.mark_applicant
+                },
+                {
+                    title: "档案分类",
+                    content: options.file_type
+                },
+                {
+                    title: "发布时间",
+                    content: options.pubdate
+                },
+                {
+                    title: "档案内容",
+                    content: options.file_info
                 }
             ]
         }
+        else if (subTitle == '著作权') {
+            content = [
+                {
+                    title: "档案编号",
+                    content: options.file_number
+                },
+                {
+                    title: "档案文号",
+                    content: options.file_no
+                },
+                {
+                    title: "著作人",
+                    content: options.author
+                },
+                {
+                    title: "档案分类",
+                    content: options.file_type
+                },
+                {
+                    title: "发布时间",
+                    content: options.pubdate
+                },
+                {
+                    title: "档案内容",
+                    content: options.file_info
+                }
+            ]
+        }
+        else if (subTitle == "协会信息" ) {
+            content = [
+                {
+                    title: "档案编号",
+                    content: options.file_number.trim()
+                },
+                {
+                    title: "档案文号",
+                    content: options.file_no
+                },
+                {
+                    title: "档案性质",
+                    content: options.file_property
+                },
+                {
+                    title: "发布单位",
+                    content: options.issuer
+                },
+                {
+                    title: "发布时间",
+                    content: options.pubdate
+                },
+                {
+                    title: "档案内容",
+                    content: options.file_content
+                }
+            ]
+        }
+        else if(subTitle=="资质证明"){
+             content = [
+                {
+                    title: "档案编号",
+                    content: options.file_no
+                },
+                {
+                    title: "证照编号",
+                    content: options.license_number ? options.license_number : '暂无'
+                },
+                {
+                    title: "档案性质",
+                    content: options.file_type
+                },
+                {
+                    title: "发布单位",
+                    content: options.issuer
+                },
+                {
+                    title: "发布时间",
+                    content: options.pubdate
+                },
+                {
+                    title: "证书内容",
+                    content: options.licence_content.trim()
+                }
+            ]
+        } 
         let newObj = {
-            corporationId: corporationId,
-            litemId: litemId,
-            subTitle: subTitle,
-            corporation: corporation,
-            infoUrl: infoUrl,
             content: content,
             imgUrl:imgUrl,
             listTitle:listTitle
@@ -142,5 +228,13 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+    preview(e){
+        if (e.currentTarget.dataset.imgUrl && e.currentTarget.dataset.imgUrl != "/libs/img/noImg.png") {
+            wx.previewImage({
+                current: e.currentTarget.dataset.imgUrl,// 当前显示图片的http链接
+                urls: [e.currentTarget.dataset.imgUrl] // 需要预览的图片http链接列表
+            })
+        }
+    }
 })
